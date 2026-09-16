@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harinakshi Baishya | Social Media & Content Strategist</title>
+  <meta name="description" content="Portfolio of Harinakshi Baishya - Social Media & Content Strategist specializing in content planning, platform strategy, copywriting, and audience-first campaigns.">
+  
+  <!-- Typography: Plus Jakarta Sans from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/animations.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. STICKY NAVIGATION BAR
+       ========================================================================= -->
+  <header class="site-header" role="banner">
+    <div class="container header-container">
+      <a href="#hero" class="brand-logo" aria-label="Harinakshi Baishya - Home">
+        <span class="brand-monogram">H</span>
+        <span>Harinakshi</span>
+      </a>
+
+      <nav class="main-nav" role="navigation" aria-label="Primary Navigation">
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#strategy" class="nav-link">Strategy</a>
+        <a href="#campaign" class="nav-link">Campaign</a>
+        <a href="#calendar" class="nav-link">Content Calendar</a>
+        <a href="#playground" class="nav-link">Showcase</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#contact" class="btn btn-primary btn-sm">Let's Create</a>
+        <button id="menu-toggle" class="menu-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="mobile-nav-menu" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+      <a href="#work" class="mobile-nav-link">Work</a>
+      <a href="#strategy" class="mobile-nav-link">Strategy</a>
+      <a href="#campaign" class="mobile-nav-link">Campaign</a>
+      <a href="#calendar" class="mobile-nav-link">Content Calendar</a>
+      <a href="#playground" class="mobile-nav-link">Showcase</a>
+      <a href="#about" class="mobile-nav-link">About</a>
+      <a href="#contact" class="mobile-nav-link">Contact</a>
+      <a href="#contact" class="btn btn-primary" style="margin-top: 10px;">Let's Create</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         2. HERO SECTION
+         ========================================================================= -->
+    <section id="hero" class="hero-section" aria-label="Hero Introduction">
+      <div class="container hero-grid">
+        <!-- Hero Left Column -->
+        <div class="hero-content fade-in">
+          <div class="hero-eyebrow">
+            <i data-lucide="sparkles"></i>
+            <span>SOCIAL MEDIA • CONTENT • STRATEGY</span>
+          </div>
+
+          <h1 class="hero-headline">
+            I turn ideas into content people want to stop, read, share and remember.
+          </h1>
+
+          <p class="hero-subtext">
+            I create social-first content and strategies designed around audience attention, clear brand voice and meaningful engagement.
+          </p>
+
+          <div class="hero-cta-row">
+            <a href="#work" class="btn btn-primary">
+              <span>Explore My Work</span>
+              <i data-lucide="arrow-down"></i>
+            </a>
+            <a href="#campaign" class="btn btn-secondary">
+              <span>View Campaign</span>
+              <i data-lucide="sparkles"></i>
+            </a>
+          </div>
+
+          <div class="hero-speculative-notice">
+            <i data-lucide="info"></i>
+            <span>Selected speculative work • All concepts crafted for portfolio demonstration</span>
+          </div>
+        </div>
+
+        <!-- Hero Right Column: Interactive Visual Collage -->
+        <div class="hero-collage-wrapper" aria-hidden="true">
+          <div class="collage-canvas">
+            <!-- 1. Instagram Card Mockup -->
+            <div class="mockup-card-ig">
+              <div class="ig-card-header">
+                <div class="ig-card-avatar">V</div>
+                <div class="ig-card-user">vela.wellness</div>
+              </div>
+              <div class="ig-card-art">
+                <div class="ig-art-eyebrow">Content Pillar 01</div>
+                <div class="ig-art-title">Why Your Morning Routine Feels Like a Chore</div>
+              </div>
+              <div class="ig-card-stats">
+                <div class="ig-stat-icons">
+                  <i data-lucide="heart"></i>
+                  <i data-lucide="message-circle"></i>
+                  <i data-lucide="send"></i>
+                </div>
+                <span>4.8k saves</span>
+              </div>
+            </div>
+
+            <!-- 2. Vertical Reel Card Mockup -->
+            <div class="mockup-card-reel">
+              <div class="reel-top-bar">
+                <span class="reel-badge">REELS</span>
+                <i data-lucide="camera"></i>
+              </div>
+              <div class="reel-center-play">
+                <i data-lucide="play" fill="#ffffff"></i>
+              </div>
+              <div class="reel-bottom-info">
+                <div class="reel-hook-text">"POV: You finally stopped creating content for everyone..."</div>
+                <div class="reel-audio-tag">
+                  <i data-lucide="music-2"></i>
+                  <span>Original Audio • Vela Morning Beats</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. LinkedIn Post Preview Mockup -->
+            <div class="mockup-card-li">
+              <div class="li-header">
+                <div class="li-avatar">in</div>
+                <div class="li-name">Harinakshi Baishya</div>
+              </div>
+              <p class="li-text">
+                "Posting 7 days a week with shallow ideas doesn't build brand equity. Posting 3 times with depth does."
+              </p>
+              <div style="font-size: 10px; color: #0A66C2; font-weight: 700;">
+                #SocialMediaStrategy • 42 comments
+              </div>
+            </div>
+
+            <!-- 4. Floating Sticky Strategy Note -->
+            <div class="mockup-sticky-note">
+              <div class="sticky-pin">
+                <i data-lucide="pin"></i> STRATEGY RULE
+              </div>
+              Hook in 1.8s.<br>Value by 4s.<br>Frictionless CTA.
+            </div>
+
+            <!-- 5. Floating Metric Badge -->
+            <div class="mockup-metric-badge">
+              <span class="metric-pulse"></span>
+              <span>+62.4% Organic Saves</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. ABOUT SECTION
+         ========================================================================= -->
+    <section id="about" class="section section-subtle" aria-label="About Harinakshi">
+      <div class="container">
+        <div class="about-grid">
+          <div>
+            <span class="eyebrow">About Me</span>
+            <h2 class="section-title">Intentional, audience-first social storytelling.</h2>
+            <p class="about-intro-text">
+              I'm Harinakshi, a social media and content-focused creative interested in building content that is useful, relatable and worth engaging with. I enjoy researching audiences, finding content opportunities, developing ideas and turning them into platform-specific posts, campaigns and content plans.
+            </p>
+            <p class="about-intro-text" style="font-size: 16px; color: var(--text-secondary);">
+              Whether writing high-retention video hooks, structuring 30-day cross-platform calendars, or distilling customer feedback into creative briefs, my focus is always on building genuine community resonance rather than chasing transient vanity metrics.
+            </p>
+
+            <!-- WHAT I WORK ON -->
+            <div class="about-chips-wrapper">
+              <div class="about-chips-label">WHAT I WORK ON</div>
+              <div class="chips-cloud">
+                <span class="chip">Social Media Content</span>
+                <span class="chip">Content Strategy</span>
+                <span class="chip">Copywriting</span>
+                <span class="chip">Campaign Concepts</span>
+                <span class="chip">Audience Research</span>
+                <span class="chip">Trend Research</span>
+                <span class="chip">Content Calendars</span>
+                <span class="chip">Social Media Audits</span>
+                <span class="chip">Basic Performance Analysis</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Working Style (4 Cards) -->
+          <div>
+            <div class="about-chips-label" style="margin-bottom: 20px;">HOW I OPERATE</div>
+            <div class="working-style-grid" style="grid-template-columns: 1fr 1fr;">
+              <div class="style-card">
+                <div class="style-card-number">01</div>
+                <h3 class="style-card-title">CURIOUS</h3>
+                <div class="style-card-tagline">Audience-First Listening</div>
+                <p class="style-card-desc">I research audiences, trends and active community conversations before creating.</p>
+              </div>
+
+              <div class="style-card">
+                <div class="style-card-number">02</div>
+                <h3 class="style-card-title">STRATEGIC</h3>
+                <div class="style-card-tagline">Purpose Over Posting</div>
+                <p class="style-card-desc">Every content idea should have a purpose, a defined pillar, and a measurable goal.</p>
+              </div>
+
+              <div class="style-card">
+                <div class="style-card-number">03</div>
+                <h3 class="style-card-title">CREATIVE</h3>
+                <div class="style-card-tagline">Fresh Angles</div>
+                <p class="style-card-desc">I look for fresh ways to communicate familiar ideas without relying on tired clichés.</p>
+              </div>
+
+              <div class="style-card">
+                <div class="style-card-number">04</div>
+                <h3 class="style-card-title">DATA-AWARE</h3>
+                <div class="style-card-tagline">Iterative Growth</div>
+                <p class="style-card-desc">I use performance signals like saves and watch time to understand what to improve.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. FEATURED WORK SECTION (3 MAJOR CASE STUDIES)
+         ========================================================================= -->
+    <section id="work" class="section" aria-label="Featured Work Case Studies">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Selected Work</span>
+          <h2 class="section-title">Case Studies & Speculative Projects</h2>
+          <p class="section-subtitle">
+            A collection of speculative social-media projects created to demonstrate my approach to content, strategy and campaigns.
+          </p>
+        </div>
+
+        <!-- ==================== CASE STUDY 01 ==================== -->
+        <article class="case-study-block" id="case-study-1">
+          <div class="case-header">
+            <div>
+              <div class="case-index">Case Study 01</div>
+              <h3 class="case-title">Brand Refresh: Making a Modern Brand More Social</h3>
+              <div class="case-brand-tag">Brand: <strong>Vela</strong> (Fictional Lifestyle / Wellness Brand)</div>
+            </div>
+            <span class="badge badge-speculative">Speculative Brand Project</span>
+          </div>
+
+          <div class="speculative-callout">
+            <i data-lucide="alert-circle"></i>
+            <div><strong>Speculative Brand Project:</strong> Created to demonstrate strategic brand repositioning, editorial consistency, and social-first asset creation for a contemporary wellness brand.</div>
+          </div>
+
+          <div class="case-grid-two-col">
+            <div class="challenge-box">
+              <h4 class="box-title">
+                <i data-lucide="x-circle"></i> The Challenge
+              </h4>
+              <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 12px;">
+                Vela had high-quality, clean wellness formulations but struggled with inconsistent social content, disjointed visual aesthetics, and zero clear content pillars.
+              </p>
+              <ul class="box-list">
+                <li><i data-lucide="alert-triangle"></i> Posts were published erratically without thematic consistency</li>
+                <li><i data-lucide="alert-triangle"></i> Visual templates lacked editorial cohesion across platforms</li>
+                <li><i data-lucide="alert-triangle"></i> Captions were brand-centric instead of audience-centric</li>
+              </ul>
+            </div>
+
+            <div class="approach-box">
+              <h4 class="box-title">
+                <i data-lucide="check-circle-2"></i> The Strategic Approach
+              </h4>
+              <ul class="box-list">
+                <li><i data-lucide="arrow-right"></i> <strong>Define Audience:</strong> Busy 22–34 y/o professionals seeking calm without a 14-step chore</li>
+                <li><i data-lucide="arrow-right"></i> <strong>Content Pillars:</strong> Established 5 recurring editorial categories</li>
+                <li><i data-lucide="arrow-right"></i> <strong>Visual Direction:</strong> Warm linen neutrals, crisp typography, and uncluttered cards</li>
+                <li><i data-lucide="arrow-right"></i> <strong>Recurring Formats:</strong> Sunday Resets, Science-backed Micro-tips, and ASMR Brews</li>
+                <li><i data-lucide="arrow-right"></i> <strong>Better Hooks & CTAs:</strong> Replaced vague taglines with clear problem-first hooks</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 5 Content Pillars -->
+          <div class="pillars-row-wrapper">
+            <h4 class="pillars-row-title">Established 5 Content Pillars:</h4>
+            <div class="pillars-grid">
+              <div class="pillar-item">
+                <div class="pillar-number">PILLAR 01</div>
+                <div class="pillar-name">Education</div>
+              </div>
+              <div class="pillar-item">
+                <div class="pillar-number">PILLAR 02</div>
+                <div class="pillar-name">Lifestyle</div>
+              </div>
+              <div class="pillar-item">
+                <div class="pillar-number">PILLAR 03</div>
+                <div class="pillar-name">Community</div>
+              </div>
+              <div class="pillar-item">
+                <div class="pillar-number">PILLAR 04</div>
+                <div class="pillar-name">Product</div>
+              </div>
+              <div class="pillar-item">
+                <div class="pillar-number">PILLAR 05</div>
+                <div class="pillar-name">Behind The Scenes</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Carousel Simulator -->
+          <div class="carousel-simulator">
+            <div class="simulator-top-bar">
+              <span id="cs-carousel-num">01 / 04</span>
+              <span>Interactive Post Slide Inspector</span>
+            </div>
+            <div class="simulator-slide-content">
+              <span id="cs-carousel-tag" class="simulator-tag">The Cover Slide</span>
+              <h4 id="cs-carousel-hook" class="simulator-hook">"Why Your Wellness Routine Feels Like Another Job"</h4>
+              <p id="cs-carousel-desc" class="simulator-desc">
+                Bold contrast, uncluttered whitespace, and an immediate problem statement stopping the scroll in under 2 seconds.
+              </p>
+            </div>
+            <div class="simulator-controls">
+              <button id="cs-carousel-prev" class="sim-nav-btn" aria-label="Previous Slide">
+                <i data-lucide="chevron-left"></i>
+              </button>
+              <div id="cs-carousel-dots" class="carousel-dots"></div>
+              <button id="cs-carousel-next" class="sim-nav-btn" aria-label="Next Slide">
+                <i data-lucide="chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- What I was solving -->
+          <div class="solving-box">
+            <strong>What I Was Solving:</strong>
+            Moving the brand from transactional product promotion to habitual content utility. Instead of telling users to buy a product, we created a reason for followers to save and bookmark Vela's posts as their daily morning guide.
+          </div>
+        </article>
+
+        <!-- ==================== CASE STUDY 02 ==================== -->
+        <article class="case-study-block" id="campaign">
+          <div class="case-header">
+            <div>
+              <div class="case-index">Case Study 02</div>
+              <h3 class="case-title">Social Launch Campaign: "30 Days of Better Mornings"</h3>
+              <div class="case-brand-tag">Brand: <strong>Vela</strong> • Channel Launch Strategy</div>
+            </div>
+            <span class="badge badge-speculative">Campaign Concept / Speculative Work</span>
+          </div>
+
+          <div class="speculative-callout">
+            <i data-lucide="alert-circle"></i>
+            <div><strong>Campaign Concept / Speculative Work:</strong> A multi-week activation model created to demonstrate full-funnel campaign planning, community engagement rituals, and multi-format content distribution.</div>
+          </div>
+
+          <div class="case-grid-two-col">
+            <div class="challenge-box">
+              <h4 class="box-title"><i data-lucide="target"></i> Campaign Goal & Audience</h4>
+              <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 12px;">
+                <strong>Goal:</strong> Build organic brand awareness, foster active community participation, and drive high-intent email newsletter opt-ins through a 30-day challenge.
+              </p>
+              <p style="font-size: 14px; color: var(--text-secondary);">
+                <strong>Target Audience:</strong> Young adults and professionals (ages 20–35) seeking realistic, low-friction habits to overcome morning fatigue and burnout.
+              </p>
+            </div>
+
+            <div class="approach-box">
+              <h4 class="box-title"><i data-lucide="layers"></i> 3 Core Campaign Themes</h4>
+              <ul class="box-list">
+                <li><i data-lucide="check"></i> <strong>Theme 1 (Days 1–10): The Mindset Reset</strong> — Screen-free boundaries, hydration rituals, and mental decompression</li>
+                <li><i data-lucide="check"></i> <strong>Theme 2 (Days 11–20): Clean Fueling</strong> — Sustained energy, gut health science, and calm focus</li>
+                <li><i data-lucide="check"></i> <strong>Theme 3 (Days 21–30): Habit Stacking</strong> — Compounding micro-routines into a sustainable daily rhythm</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Deliverables Showcase -->
+          <div class="deliverables-grid">
+            <div class="deliverable-card">
+              <h4><i data-lucide="instagram"></i> 5 Instagram Concepts</h4>
+              <ul>
+                <li>• Launch Carousel: "30 Micro-Changes"</li>
+                <li>• Educational Infographic: "Circadian Light 101"</li>
+                <li>• Ingredient Deep-Dive: "Why L-Theanine?"</li>
+                <li>• UGC Photo Dump: Community Morning Cups</li>
+                <li>• Challenge Graduation VIP Reveal</li>
+              </ul>
+            </div>
+
+            <div class="deliverable-card">
+              <h4><i data-lucide="film"></i> 3 Reel Concepts</h4>
+              <ul>
+                <li>• "POV: You swap the 7 AM panic for 5 quiet minutes"</li>
+                <li>• "3 Morning Habits We Stopped Doing in 2026"</li>
+                <li>• ASMR Sensory Review: Textures of Morning Calm</li>
+              </ul>
+            </div>
+
+            <div class="deliverable-card">
+              <h4><i data-lucide="sparkles"></i> 3 Story Concepts</h4>
+              <ul>
+                <li>• Daily "Habit Check" interactive poll stickers</li>
+                <li>• Midday Q&A box: "What tripped up your morning?"</li>
+                <li>• Community reposts tagged with #BetterMorningsWithVela</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Strategy Row -->
+          <div class="campaign-strategy-row">
+            <div class="strategy-pill-box">
+              <h5>CTA Strategy</h5>
+              <p>Phased CTAs: Week 1 focuses on <strong>"Tag a partner"</strong>, Week 2 on <strong>"Save this checklist"</strong>, and Week 4 on <strong>"Claim your challenge graduation gift"</strong>.</p>
+            </div>
+            <div class="strategy-pill-box">
+              <h5>Hashtag Approach</h5>
+              <p>Tightly curated: <code>#BetterMorningsWithVela</code> (primary community tag), <code>#VelaMorningRitual</code>, paired with 3 targeted niche tags (e.g. <code>#MorningReset</code>).</p>
+            </div>
+            <div class="strategy-pill-box">
+              <h5>Community Plan</h5>
+              <p>Direct reply policy: 100% of community check-in tags reshared to Stories with personalized cheerleading notes within 4 hours.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==================== CASE STUDY 03 ==================== -->
+        <article class="case-study-block" id="audit-case-study">
+          <div class="case-header">
+            <div>
+              <div class="case-index">Case Study 03</div>
+              <h3 class="case-title">Social Media Audit: What I Would Improve</h3>
+              <div class="case-brand-tag">Reference Brand: <strong>Glossier</strong> (Independent External Analysis)</div>
+            </div>
+            <span class="badge badge-speculative">Independent Portfolio Analysis</span>
+          </div>
+
+          <div class="speculative-callout">
+            <i data-lucide="shield-alert"></i>
+            <div><strong>Independent Portfolio Analysis:</strong> This analysis was prepared as an independent creative exercise for portfolio evaluation. Harinakshi Baishya is not affiliated with or endorsed by Glossier.</div>
+          </div>
+
+          <div class="case-grid-two-col">
+            <div>
+              <h4 class="box-title"><i data-lucide="eye"></i> Current Observations</h4>
+              <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 12px;">
+                Glossier retains iconic aesthetic recognition and strong brand nostalgia, but its recent feed exhibits high reliance on polished product packshots with declining organic comments.
+              </p>
+              <ul class="box-list">
+                <li><i data-lucide="circle-dot"></i> <strong>Audience:</strong> Highly engaged in DMs and TikTok comments, but feed carousels lack save-worthy educational utility.</li>
+                <li><i data-lucide="circle-dot"></i> <strong>Formats:</strong> Over-indexing on static product images; short-form video could lean more into honest problem-solution skin tutorials.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="box-title"><i data-lucide="sparkles"></i> Content Gaps & Opportunities</h4>
+              <ul class="box-list">
+                <li><i data-lucide="check"></i> <strong>Gap:</strong> Missing direct ingredient transparency breakdowns that younger skincare-savvy shoppers demand.</li>
+                <li><i data-lucide="check"></i> <strong>Opportunity:</strong> Introduce "The Honest Routine" series featuring real skin textures in natural daylight without studio lighting filters.</li>
+                <li><i data-lucide="check"></i> <strong>Engagement Loop:</strong> Replace broadcast captions with interactive community questions regarding discontinued shades and everyday routines.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="pillars-row-wrapper" style="margin-top: 24px;">
+            <h4 class="pillars-row-title">5 Actionable Content Concepts I Would Pitch:</h4>
+            <div class="deliverables-grid" style="grid-template-columns: repeat(5, 1fr);">
+              <div class="deliverable-card">
+                <strong style="font-size: 12px; color: var(--accent-primary);">01 • Carousel</strong>
+                <p style="font-size: 12px; margin-top: 6px;">"How to apply Cloud Paint for your specific cheekbone shape."</p>
+              </div>
+              <div class="deliverable-card">
+                <strong style="font-size: 12px; color: var(--accent-primary);">02 • Reel</strong>
+                <p style="font-size: 12px; margin-top: 6px;">"Real skin in real sunlight: Boy Brow vs 8 hours of wind & rain."</p>
+              </div>
+              <div class="deliverable-card">
+                <strong style="font-size: 12px; color: var(--accent-primary);">03 • Story Series</strong>
+                <p style="font-size: 12px; margin-top: 6px;">"Community Vault: Vote for which archived shade should make a guest return."</p>
+              </div>
+              <div class="deliverable-card">
+                <strong style="font-size: 12px; color: var(--accent-primary);">04 • TikTok</strong>
+                <p style="font-size: 12px; margin-top: 6px;">"Unfiltered GRWM with our product chemist explaining what's actually in Balm Dotcom."</p>
+              </div>
+              <div class="deliverable-card">
+                <strong style="font-size: 12px; color: var(--accent-primary);">05 • LinkedIn</strong>
+                <p style="font-size: 12px; margin-top: 6px;">"Why community-led beauty brands must evolve from aesthetics to active dialogue."</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. CONTENT PLAYGROUND (12 RICH ITEMS & DETAIL MODAL)
+         ========================================================================= -->
+    <section id="playground" class="section section-subtle" aria-label="Content Showcase Playground">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="eyebrow">Content Showcase</span>
+          <h2 class="section-title">Content Playground</h2>
+          <p class="section-subtitle">
+            Explore 12 interactive content samples across Instagram, Reels, Stories, and LinkedIn. Click any post to inspect the hook, complete caption, CTA, and strategy.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="playground-filter-bar" role="tablist">
+          <button class="filter-btn active" data-filter="All" role="tab">All</button>
+          <button class="filter-btn" data-filter="Instagram" role="tab">Instagram</button>
+          <button class="filter-btn" data-filter="Reels" role="tab">Reels</button>
+          <button class="filter-btn" data-filter="Stories" role="tab">Stories</button>
+          <button class="filter-btn" data-filter="LinkedIn" role="tab">LinkedIn</button>
+          <button class="filter-btn" data-filter="Campaigns" role="tab">Campaigns</button>
+          <button class="filter-btn" data-filter="Copy" role="tab">Copy</button>
+        </div>
+
+        <!-- Dynamic Grid Container -->
+        <div id="playground-grid" class="playground-grid">
+          <!-- Populated by scripts/app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. COPYWRITING SECTION ("WORDS MATTER")
+         ========================================================================= -->
+    <section id="copywriting" class="section" aria-label="Copywriting Showcase">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="eyebrow">Copywriting</span>
+          <h2 class="section-title">Words Matter</h2>
+          <p class="section-subtitle">
+            Demonstrating versatile brand voices across educational, relatable, promotional, and storytelling angles.
+          </p>
+        </div>
+
+        <div class="copywriting-wrapper">
+          <div class="copy-tabs-nav" role="tablist">
+            <button class="copy-tab active" data-type="EDUCATIONAL" role="tab">Educational</button>
+            <button class="copy-tab" data-type="RELATABLE" role="tab">Relatable</button>
+            <button class="copy-tab" data-type="PROMOTIONAL" role="tab">Promotional</button>
+            <button class="copy-tab" data-type="STORYTELLING" role="tab">Storytelling</button>
+          </div>
+
+          <div id="copy-display-box">
+            <!-- Populated by scripts/app.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. SOCIAL MEDIA STRATEGY SECTION ("HOW I THINK ABOUT SOCIAL")
+         ========================================================================= -->
+    <section id="strategy" class="section section-subtle" aria-label="Strategy Process">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="eyebrow">Strategic Thinking</span>
+          <h2 class="section-title">How I Think About Social</h2>
+          <p class="section-subtitle">
+            A 5-step strategic framework designed to transform erratic posting into an intentional growth engine.
+          </p>
+        </div>
+
+        <!-- Visual Process Timeline -->
+        <div class="strategy-visual-flow" aria-label="Process flow diagram">
+          <span class="flow-step-node">RESEARCH</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-step-node">STRATEGY</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-step-node">CREATE</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-step-node">PUBLISH</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-step-node">ENGAGE</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-step-node">ANALYZE</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-step-node">ITERATE</span>
+        </div>
+
+        <!-- 5 Step Cards Grid -->
+        <div class="strategy-steps-grid">
+          <div class="strategy-step-card is-active">
+            <div class="step-card-num">01</div>
+            <h3 class="step-card-title">Research</h3>
+            <p class="step-card-desc">Understand the target audience, analyze competitor whitespace, and study active community conversations.</p>
+          </div>
+
+          <div class="strategy-step-card">
+            <div class="step-card-num">02</div>
+            <h3 class="step-card-title">Define</h3>
+            <p class="step-card-desc">Establish distinct content pillars, voice guidelines, and specific engagement goals for each platform.</p>
+          </div>
+
+          <div class="strategy-step-card">
+            <div class="step-card-num">03</div>
+            <h3 class="step-card-title">Create</h3>
+            <p class="step-card-desc">Draft platform-native content with intentional hooks, frictionless CTAs, and clear visual hierarchy.</p>
+          </div>
+
+          <div class="strategy-step-card">
+            <div class="step-card-num">04</div>
+            <h3 class="step-card-title">Engage</h3>
+            <p class="step-card-desc">Foster community dialogues, respond to comment threads promptly, and nurture active brand advocates.</p>
+          </div>
+
+          <div class="strategy-step-card">
+            <div class="step-card-num">05</div>
+            <h3 class="step-card-title">Analyze</h3>
+            <p class="step-card-desc">Review high-signal metrics like saves, shares, and hook retention to systematically refine future content.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. 30-DAY CONTENT CALENDAR (DYNAMIC TABLE & MULTI-FILTERING)
+         ========================================================================= -->
+    <section id="calendar" class="section" aria-label="30-Day Content Calendar">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Editorial Planning</span>
+          <h2 class="section-title">30-Day Social Content Plan</h2>
+          <p class="section-subtitle">
+            A comprehensive, multi-platform monthly roadmap balancing educational carousels, viral discovery reels, interactive stories, and community prompts.
+          </p>
+        </div>
+
+        <div class="calendar-card">
+          <!-- Filter Controls Bar -->
+          <div class="calendar-controls-bar">
+            <div class="calendar-search-box">
+              <i data-lucide="search"></i>
+              <input type="text" id="calendar-search" placeholder="Search topic, hook or CTA..." aria-label="Search content calendar">
+            </div>
+
+            <div class="calendar-filters-group">
+              <select id="calendar-platform-filter" class="calendar-select" aria-label="Filter by Platform">
+                <option value="All">All Platforms</option>
+                <option value="Instagram">Instagram</option>
+                <option value="LinkedIn">LinkedIn</option>
+                <option value="TikTok/Reels">TikTok/Reels</option>
+              </select>
+
+              <select id="calendar-type-filter" class="calendar-select" aria-label="Filter by Content Type">
+                <option value="All">All Content Types</option>
+                <option value="Carousel">Carousel</option>
+                <option value="Reel">Reel</option>
+                <option value="Story">Story</option>
+                <option value="Static Post">Static Post</option>
+                <option value="Text Post">Text Post</option>
+                <option value="Poll">Poll</option>
+                <option value="Community Post">Community Post</option>
+              </select>
+
+              <select id="calendar-objective-filter" class="calendar-select" aria-label="Filter by Objective">
+                <option value="All">All Objectives</option>
+                <option value="Awareness">Awareness</option>
+                <option value="Engagement">Engagement</option>
+                <option value="Education">Education</option>
+                <option value="Community">Community</option>
+                <option value="Conversion">Conversion</option>
+              </select>
+
+              <button id="calendar-reset-btn" class="btn btn-secondary btn-sm" title="Reset all filters">Reset</button>
+
+              <span id="calendar-count-badge" class="calendar-count-badge">Showing 30 of 30 days</span>
+            </div>
+          </div>
+
+          <!-- Responsive Table -->
+          <div class="calendar-table-responsive">
+            <table class="calendar-table" summary="30-Day Social Media Content Calendar">
+              <thead>
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Platform</th>
+                  <th scope="col">Format</th>
+                  <th scope="col">Topic</th>
+                  <th scope="col">The Hook</th>
+                  <th scope="col">Objective</th>
+                  <th scope="col">CTA</th>
+                </tr>
+              </thead>
+              <tbody id="calendar-table-body">
+                <!-- Dynamically populated by scripts/app.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         9. SOCIAL MEDIA ANALYTICS ("MEASURE WHAT MATTERS")
+         ========================================================================= -->
+    <section id="analytics" class="section section-subtle" aria-label="Social Media Analytics Dashboard">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Performance Signals</span>
+          <h2 class="section-title">Measure What Matters</h2>
+          <p class="section-subtitle">
+            A sample social-media performance dashboard illustrating how I interpret quantitative feedback loops to inform creative direction.
+          </p>
+        </div>
+
+        <div class="speculative-callout">
+          <i data-lucide="bar-chart-3"></i>
+          <div><strong>DEMO DATA — FOR PORTFOLIO PURPOSES ONLY:</strong> These figures illustrate an analytical framework for tracking format utility, hook retention, and audience growth signals.</div>
+        </div>
+
+        <!-- Metric Cards Grid -->
+        <div class="analytics-metrics-grid">
+          <div class="metric-card">
+            <div class="metric-header">
+              <span class="metric-label">Reach</span>
+              <span class="metric-change">+34.2%</span>
+            </div>
+            <div class="metric-value">142,500</div>
+            <div class="metric-note">Driven by educational carousels</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-header">
+              <span class="metric-label">Impressions</span>
+              <span class="metric-change">+28.7%</span>
+            </div>
+            <div class="metric-value">318,200</div>
+            <div class="metric-note">High replay rate on video reels</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-header">
+              <span class="metric-label">Engagement Rate</span>
+              <span class="metric-change">+1.15%</span>
+            </div>
+            <div class="metric-value">4.82%</div>
+            <div class="metric-note">Benchmark avg is ~1.9%</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-header">
+              <span class="metric-label">Total Saves</span>
+              <span class="metric-change">+62.4%</span>
+            </div>
+            <div class="metric-value">6,420</div>
+            <div class="metric-note">Core signal of content utility</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-header">
+              <span class="metric-label">Direct Shares</span>
+              <span class="metric-change">+41.0%</span>
+            </div>
+            <div class="metric-value">4,180</div>
+            <div class="metric-note">Peer-to-peer amplification</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-header">
+              <span class="metric-label">Profile Visits</span>
+              <span class="metric-change">+22.8%</span>
+            </div>
+            <div class="metric-value">12,940</div>
+            <div class="metric-note">High conversion intent</div>
+          </div>
+
+          <div class="metric-card" style="grid-column: span 2;">
+            <div class="metric-header">
+              <span class="metric-label">Net Organic Follower Growth</span>
+              <span class="metric-change">+14.6%</span>
+            </div>
+            <div class="metric-value">+1,850</div>
+            <div class="metric-note">Target demographic community members gained over 30-day campaign</div>
+          </div>
+        </div>
+
+        <!-- Interactive Charts Grid -->
+        <div class="analytics-charts-grid">
+          <div class="chart-card">
+            <h3 class="chart-title">Reach & Saves Share by Format</h3>
+            <p class="chart-sub">Comparing reach distribution versus bookmarking utility across formats</p>
+            <div id="analytics-chart-container" class="chart-render-area">
+              <!-- Rendered by scripts/charts.js -->
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <h3 class="chart-title">Hook Retention Curve (0 to 30 Seconds)</h3>
+            <p class="chart-sub">Optimized 1.8s problem-hook vs standard industry drop-off curve</p>
+            <div id="retention-chart-container" class="chart-render-area">
+              <!-- Rendered by scripts/charts.js -->
+            </div>
+          </div>
+        </div>
+
+        <!-- "What I Would Look For" strategic questions -->
+        <div class="strategic-questions-block">
+          <h3 style="font-size: 20px; font-weight: 800;">What I Look For In The Data</h3>
+          <div class="questions-grid">
+            <div class="question-item">
+              <div class="question-text"><i data-lucide="bookmark"></i> Which content earns saves?</div>
+              <div class="question-insight">High saves indicate practical utility. Step-by-step frameworks and curated resources earn 4.2x more saves than generic lifestyle imagery.</div>
+            </div>
+
+            <div class="question-item">
+              <div class="question-text"><i data-lucide="share-2"></i> Which formats generate shares?</div>
+              <div class="question-insight">Relatable situational humor and validating quotes drive peer forwards, introducing the brand to lookalike audiences without ad spend.</div>
+            </div>
+
+            <div class="question-item">
+              <div class="question-text"><i data-lucide="clock"></i> Which hooks improve retention?</div>
+              <div class="question-insight">Direct problem statements in the first 2 seconds reduce drop-off by over 36% compared to generic introductory greetings.</div>
+            </div>
+
+            <div class="question-item">
+              <div class="question-text"><i data-lucide="messages-square"></i> Which topics create conversations?</div>
+              <div class="question-insight">Contrarian takes on industry dogmas ("Why posting daily is counterproductive") yield the deepest, highest-quality comment threads.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         10. TREND RESEARCH SECTION ("TREND → IDEA → EXECUTION")
+         ========================================================================= -->
+    <section id="trends" class="section" aria-label="Trend Research Framework">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="eyebrow">Cultural Agility</span>
+          <h2 class="section-title">Trend → Idea → Execution</h2>
+          <p class="section-subtitle">
+            A disciplined framework for adapting trending internet formats without diluting core brand positioning.
+          </p>
+        </div>
+
+        <div class="trends-grid">
+          <!-- Trend 1 -->
+          <div class="trend-card">
+            <span class="trend-badge">Perspective Framing</span>
+            <h3 class="trend-name">"POV Format"</h3>
+            <div class="trend-step">
+              <span class="trend-step-label">Idea</span>
+              <p class="trend-step-text">"POV: You finally stop creating content for everyone."</p>
+            </div>
+            <div class="trend-step">
+              <span class="trend-step-label">Execution</span>
+              <p class="trend-step-text">Short 7-second Reel showing a creator deleting broad inspirational quotes and replacing them with 3 hyperspecific audience problem statements.</p>
+            </div>
+            <div class="trend-step">
+              <span class="trend-step-label">Strategic Rationale</span>
+              <p class="trend-step-text">Puts the target audience directly inside an empathetic, instantly relatable creator moment.</p>
+            </div>
+          </div>
+
+          <!-- Trend 2 -->
+          <div class="trend-card">
+            <span class="trend-badge">Sensory Demonstration</span>
+            <h3 class="trend-name">"Silent Review / ASMR Style"</h3>
+            <div class="trend-step">
+              <span class="trend-step-label">Idea</span>
+              <p class="trend-step-text">"Silent Review: What 7 days of morning calm actually feels like."</p>
+            </div>
+            <div class="trend-step">
+              <span class="trend-step-label">Execution</span>
+              <p class="trend-step-text">Low-distraction, text-on-screen Reel with natural ambient sounds (coffee pouring, notebook opening) highlighting quiet craftsmanship.</p>
+            </div>
+            <div class="trend-step">
+              <span class="trend-step-label">Strategic Rationale</span>
+              <p class="trend-step-text">Cuts through loud feeds by offering tactile aesthetic calm.</p>
+            </div>
+          </div>
+
+          <!-- Trend 3 -->
+          <div class="trend-card">
+            <span class="trend-badge">Educational Authority</span>
+            <h3 class="trend-name">"Green Screen Breakdown"</h3>
+            <div class="trend-step">
+              <span class="trend-step-label">Idea</span>
+              <p class="trend-step-text">"Deconstructing why this everyday lifestyle ad stopped our scroll."</p>
+            </div>
+            <div class="trend-step">
+              <span class="trend-step-label">Execution</span>
+              <p class="trend-step-text">Presenter stands before a screenshot of an effective campaign, dissecting the visual hierarchy and psychological hook in real time.</p>
+            </div>
+            <div class="trend-step">
+              <span class="trend-step-label">Strategic Rationale</span>
+              <p class="trend-step-text">Positions the brand or strategist as an authoritative educator dissecting modern culture.</p>
+            </div>
+          </div>
+
+          <!-- Trend 4 -->
+          <div class="trend-card">
+            <span class="trend-badge">Empathetic Curation</span>
+            <h3 class="trend-name">"We Tested X So You Don't Have To"</h3>
+            <div class="trend-step">
+              <span class="trend-step-label">Idea</span>
+              <p class="trend-step-text">"We tested 4 common morning wellness habits so you don't waste your time."</p>
+            </div>
+            <div class="trend-step">
+              <span class="trend-step-label">Execution</span>
+              <p class="trend-step-text">Fast carousel comparing cold showers, 5-minute journaling, and outdoor light, scored by feasibility and practical results.</p>
+            </div>
+            <div class="trend-step">
+              <span class="trend-step-label">Strategic Rationale</span>
+              <p class="trend-step-text">Saves the audience cognitive effort, creating high-intent bookmarking behavior.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="trend-rule-box">
+          <i data-lucide="compass" style="vertical-align: middle; margin-right: 8px;"></i>
+          Golden Rule: <span>"Trends should support the brand message rather than replace it."</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         11. SOCIAL MEDIA AUDIT CHECKLIST
+         ========================================================================= -->
+    <section id="audit" class="section section-subtle" aria-label="Social Media Audit Checklist">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Diagnostic Toolkit</span>
+          <h2 class="section-title">Social Media Audit Framework</h2>
+          <p class="section-subtitle">
+            An interactive 20-point diagnostic checklist covering profile positioning, content health, community engagement, discovery, and conversion funnels.
+          </p>
+        </div>
+
+        <div class="audit-card">
+          <div class="audit-score-banner">
+            <div class="audit-score-info">
+              <h4>Audit Health Score</h4>
+              <p>Click checkboxes below to evaluate real-time channel compliance</p>
+            </div>
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <span id="audit-score-counter" style="font-weight: 800; font-size: 15px; color: var(--accent-primary);">20 / 20 Passed (100%)</span>
+              <div class="audit-progress-container">
+                <div id="audit-progress-bar" class="audit-progress-bar"></div>
+              </div>
+            </div>
+          </div>
+
+          <div id="audit-checklist-container" class="audit-checklist-grid">
+            <!-- Dynamically populated by scripts/app.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         12. CONTENT STRATEGY CASE STUDY: BEFORE VS AFTER
+         ========================================================================= -->
+    <section id="system" class="section" aria-label="Content System Case Study">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="eyebrow">Transformation Case Study</span>
+          <h2 class="section-title">From Random Posts to a Content System</h2>
+          <p class="section-subtitle">
+            How structuring consistent editorial pillars transforms chaotic social feeds into predictable brand assets.
+          </p>
+        </div>
+
+        <div class="system-case-grid">
+          <div class="system-column col-before">
+            <div class="system-col-header">
+              <i data-lucide="x-circle"></i>
+              <h3 style="font-size: 20px; font-weight: 800;">BEFORE: The Guesswork Cycle</h3>
+            </div>
+            <ul class="system-points-list">
+              <li><i data-lucide="x"></i> <strong>Random Topics:</strong> Posting whatever idea emerged 30 minutes before publishing.</li>
+              <li><i data-lucide="x"></i> <strong>Inconsistent Formats:</strong> Unpredictable mix of styles with no visual recognizable rhythm.</li>
+              <li><i data-lucide="x"></i> <strong>Unclear Audience:</strong> Trying to appeal to everyone and resonating with nobody.</li>
+              <li><i data-lucide="x"></i> <strong>Weak CTAs:</strong> Vague sign-offs like "let us know" resulting in zero comment activity.</li>
+              <li><i data-lucide="x"></i> <strong>Creator Burnout:</strong> Daily panic over what to post next with no editorial reserve.</li>
+            </ul>
+          </div>
+
+          <div class="system-column col-after">
+            <div class="system-col-header">
+              <i data-lucide="check-circle-2"></i>
+              <h3 style="font-size: 20px; font-weight: 800;">AFTER: The Content Engine</h3>
+            </div>
+            <ul class="system-points-list">
+              <li><i data-lucide="check"></i> <strong>Defined Audience:</strong> Hyperspecific persona with addressed pain points and language.</li>
+              <li><i data-lucide="check"></i> <strong>5 Content Pillars:</strong> Reliable thematic pillars balancing education, lifestyle, and product.</li>
+              <li><i data-lucide="check"></i> <strong>Recurring Formats:</strong> Established weekly franchises (Sunday Reset, Tuesday Breakdown).</li>
+              <li><i data-lucide="check"></i> <strong>Clear, High-Intent CTAs:</strong> Specific requests for saves, shares, or comment votes.</li>
+              <li><i data-lucide="check"></i> <strong>Monthly Roadmap:</strong> 30-day proactive batching reducing stress and boosting quality.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         13. TOOLS SECTION
+         ========================================================================= -->
+    <section id="tools" class="section section-subtle" aria-label="Tools and Software">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Technical Stack</span>
+          <h2 class="section-title">Tools I Work With</h2>
+          <p class="section-subtitle">
+            Specialized platforms and creative software powering my daily social media and content planning workflow.
+          </p>
+        </div>
+
+        <div class="tools-grid">
+          <div class="tool-card">
+            <div class="tool-icon-box"><i data-lucide="palette"></i></div>
+            <div class="tool-info">
+              <span class="tool-name">Canva</span>
+              <span class="tool-cat">Visual Design & Layout</span>
+              <span class="tool-status-tag status-daily">Daily Workflow</span>
+            </div>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-icon-box"><i data-lucide="instagram"></i></div>
+            <div class="tool-info">
+              <span class="tool-name">Instagram</span>
+              <span class="tool-cat">Native Creation & Insights</span>
+              <span class="tool-status-tag status-daily">Daily Workflow</span>
+            </div>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-icon-box"><i data-lucide="linkedin"></i></div>
+            <div class="tool-info">
+              <span class="tool-name">LinkedIn</span>
+              <span class="tool-cat">Thought Leadership & Copy</span>
+              <span class="tool-status-tag status-daily">Daily Workflow</span>
+            </div>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-icon-box"><i data-lucide="trending-up"></i></div>
+            <div class="tool-info">
+              <span class="tool-name">Google Trends</span>
+              <span class="tool-cat">Search & Topic Research</span>
+              <span class="tool-status-tag status-daily">Daily Workflow</span>
+            </div>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-icon-box"><i data-lucide="layout-dashboard"></i></div>
+            <div class="tool-info">
+              <span class="tool-name">Meta Business Suite</span>
+              <span class="tool-cat">Scheduling & Publishing</span>
+              <span class="tool-status-tag status-daily">Daily Workflow</span>
+            </div>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-icon-box"><i data-lucide="film"></i></div>
+            <div class="tool-info">
+              <span class="tool-name">CapCut</span>
+              <span class="tool-cat">Reel & Short-form Editing</span>
+              <span class="tool-status-tag status-daily">Daily Workflow</span>
+            </div>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-icon-box"><i data-lucide="table"></i></div>
+            <div class="tool-info">
+              <span class="tool-name">Google Sheets</span>
+              <span class="tool-cat">Calendars & Analytics Logging</span>
+              <span class="tool-status-tag status-daily">Daily Workflow</span>
+            </div>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-icon-box"><i data-lucide="book-open"></i></div>
+            <div class="tool-info">
+              <span class="tool-name">Notion</span>
+              <span class="tool-cat">Content Planning & Strategy</span>
+              <span class="tool-status-tag status-daily">Daily Workflow</span>
+            </div>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-icon-box"><i data-lucide="sparkles"></i></div>
+            <div class="tool-info">
+              <span class="tool-name">ChatGPT / AI Tools</span>
+              <span class="tool-cat">Brainstorming & Angle Exploration</span>
+              <span class="tool-status-tag status-familiar">Familiar with</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         14. CONTACT SECTION
+         ========================================================================= -->
+    <section id="contact" class="section" aria-label="Contact and Inquiries">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-grid">
+            <div class="contact-left">
+              <span class="eyebrow">Get In Touch</span>
+              <h3>Have a brand, idea or story to tell?</h3>
+              <p>
+                Let's create something people want to engage with. I'm currently exploring opportunities for <strong>Social Media, Social Media Executive, and Content & Social Media roles</strong>.
+              </p>
+
+              <div class="contact-credentials-box">
+                <div class="credential-row">
+                  <span class="credential-label">Name:</span>
+                  <span style="font-weight: 700; color: var(--text-primary);">Harinakshi Baishya</span>
+                </div>
+                <div class="credential-row">
+                  <span class="credential-label">Email:</span>
+                  <span class="credential-val">[Available upon direct recruiter inquiry]</span>
+                </div>
+                <div class="credential-row">
+                  <span class="credential-label">LinkedIn:</span>
+                  <span class="credential-val">[Available upon direct recruiter inquiry]</span>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <button id="copy-email-btn" class="btn btn-primary">
+                  <i data-lucide="mail"></i>
+                  <span>Inquire Via Email</span>
+                </button>
+                <a href="#contact" class="btn btn-secondary" onclick="alert('Direct LinkedIn URL available upon request.');">
+                  <i data-lucide="linkedin"></i>
+                  <span>LinkedIn Profile</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Recruiter Quick Message Form -->
+            <div>
+              <form id="portfolio-contact-form" class="contact-form" action="#">
+                <div class="form-group">
+                  <label for="recruiter-name">Your Name / Organization</label>
+                  <input type="text" id="recruiter-name" placeholder="e.g. Acme Media / Talent Lead" required>
+                </div>
+                <div class="form-group">
+                  <label for="recruiter-email">Your Work Email</label>
+                  <input type="email" id="recruiter-email" placeholder="name@company.com" required>
+                </div>
+                <div class="form-group">
+                  <label for="recruiter-message">Role Opportunity or Collaboration Note</label>
+                  <textarea id="recruiter-message" rows="4" placeholder="Hi Harinakshi, we'd love to speak with you about our Social Media role..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-dark" style="align-self: flex-start;">
+                  <i data-lucide="send"></i>
+                  <span>Send Direct Message</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       15. FOOTER
+       ========================================================================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <div class="footer-brand">Harinakshi Baishya</div>
+          <div class="footer-sub">Social Media • Content • Strategy</div>
+        </div>
+        <p style="font-size: 14px; color: #D4D4D8; font-style: italic;">
+          "Built with curiosity, creativity and a social-first mindset."
+        </p>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Harinakshi Baishya. All rights reserved.</span>
+        <span>Speculative work clearly indicated throughout. Crafted for recruiter review.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       16. DETAIL MODAL (CONTENT PLAYGROUND INSPECTOR)
+       ========================================================================= -->
+  <div id="content-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Content Item Details">
+    <div id="modal-backdrop" class="modal-backdrop" style="position: absolute; inset: 0;"></div>
+    <div class="modal-container">
+      <button id="modal-close-btn" class="modal-close-btn" aria-label="Close dialog">
+        <i data-lucide="x"></i>
+      </button>
+      <div id="modal-body-content" class="modal-body">
+        <!-- Dynamically rendered by scripts/app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-notice" class="toast-notice" role="status" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="scripts/data.js"></script>
+  <script src="scripts/charts.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>
