@@ -1,6 +1,6 @@
 /**
  * Harinakshi Baishya - Social Media & Content Strategist Portfolio
- * Main Application Logic: Navigation, Modals, Showcase Filters, 30-Day Calendar, Audit Checklist, Interactive Tabs
+ * Main Application Logic: Navigation, Visual Modals, Showcase Filters, 30-Day Calendar, Measurement Framework, Audit Checklist
  */
 
 function refreshIcons() {
@@ -11,14 +11,17 @@ function refreshIcons() {
 
 document.addEventListener("DOMContentLoaded", () => {
   initNavbar();
+  initWorkflowSection();
   initContentPlayground();
   initContentModal();
+  initCampaignMeasurement();
+  initHookComparison();
+  initGlossierAudit();
   initContentCalendar();
   initCopywritingLab();
   initStrategyFlow();
   initAuditChecklist();
   initCaseStudy01Carousel();
-  initAnalytics();
   initContactActions();
   refreshIcons();
 });
@@ -32,7 +35,6 @@ function initNavbar() {
   const mobileMenu = document.getElementById("mobile-menu");
   const mobileLinks = document.querySelectorAll(".mobile-nav-link");
 
-  // Sticky header scroll shadow
   window.addEventListener("scroll", () => {
     if (window.scrollY > 20) {
       header.classList.add("is-scrolled");
@@ -41,7 +43,6 @@ function initNavbar() {
     }
   });
 
-  // Mobile menu toggle
   if (menuToggle && mobileMenu) {
     menuToggle.addEventListener("click", () => {
       const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
@@ -61,7 +62,26 @@ function initNavbar() {
 }
 
 /* ==========================================================================
-   2. CONTENT PLAYGROUND (12 ITEMS & FILTERING)
+   2. "FROM BRIEF TO POST" CONTENT CREATION WORKFLOW SECTION
+   ========================================================================== */
+function initWorkflowSection() {
+  const container = document.getElementById("workflow-steps-container");
+  if (!container || !PORTFOLIO_DATA.workflowSteps) return;
+
+  container.innerHTML = PORTFOLIO_DATA.workflowSteps.map(step => `
+    <div class="workflow-card">
+      <div class="workflow-num">${step.number}</div>
+      <h3 class="workflow-title">${step.title}</h3>
+      <div class="workflow-question">"${step.question}"</div>
+      <p class="workflow-desc">${step.description}</p>
+    </div>
+  `).join("");
+
+  refreshIcons();
+}
+
+/* ==========================================================================
+   3. CONTENT PLAYGROUND (12 POLISHED VISUAL ITEMS & FILTERING)
    ========================================================================== */
 let activePlaygroundFilter = "All";
 
@@ -94,33 +114,41 @@ function renderPlaygroundCards(filter) {
   });
 
   grid.innerHTML = items.map(item => `
-    <article class="content-card" data-id="${item.id}" tabindex="0" role="button" aria-label="View post details for ${item.title}">
+    <article class="content-card" data-id="${item.id}" tabindex="0" role="button" aria-label="Inspect ${item.title}">
+      <!-- Visual Showcase Header Card -->
       <div class="card-visual-wrapper visual-${item.visualType}">
-        <span class="card-speculative-badge">Speculative Work</span>
-        <div class="card-visual-content">
-          <div class="visual-platform-tag">
-            <i data-lucide="${getPlatformIcon(item.platform)}"></i>
-            <span>${item.platform}</span>
+        <div class="card-speculative-badge">PORTFOLIO SAMPLE</div>
+        
+        <div class="card-visual-inner">
+          <div class="card-platform-pills">
+            <span class="pill-plat"><i data-lucide="${getPlatformIcon(item.platform)}"></i> ${item.platform}</span>
+            <span class="pill-format">${item.format}</span>
           </div>
-          <div class="visual-headline">${item.hook}</div>
-          <div class="visual-meta-row">
-            <span class="visual-format-chip">${item.format}</span>
-            <span class="visual-action-prompt">Inspect Post →</span>
+
+          <div class="card-visual-hero">
+            <div class="card-code-tag">Item ${item.code}</div>
+            <h4 class="card-hook-headline">"${item.hook}"</h4>
+          </div>
+
+          <div class="card-visual-bottom">
+            <span class="pill-obj">Objective: <strong>${item.objective}</strong></span>
+            <span class="card-inspect-hint">Inspect Visual & Copy →</span>
           </div>
         </div>
       </div>
       
+      <!-- Card Info -->
       <div class="card-info">
         <div class="card-header-tags">
-          <span class="badge badge-subtle">${item.badge}</span>
-          <span class="badge badge-objective">${item.objective}</span>
+          <span class="badge badge-subtle">${item.platform.toUpperCase()}</span>
+          <span class="badge badge-subtle">${item.format.toUpperCase()}</span>
+          <span class="badge badge-objective">${item.objective.toUpperCase()}</span>
         </div>
         <h3 class="card-title">${item.title}</h3>
         <p class="card-desc">${item.shortDesc}</p>
         <div class="card-footer-cta">
-          <span class="cta-label">Objective:</span>
-          <strong>${item.objective}</strong>
-          <span class="cta-inspect-btn">Details & Caption <i data-lucide="arrow-up-right"></i></span>
+          <span class="view-visual-prompt"><i data-lucide="eye"></i> View Full Creative Sample</span>
+          <i data-lucide="arrow-up-right" style="color: var(--accent-primary);"></i>
         </div>
       </div>
     </article>
@@ -128,7 +156,6 @@ function renderPlaygroundCards(filter) {
 
   refreshIcons();
 
-  // Attach click events to open modal
   const cards = grid.querySelectorAll(".content-card");
   cards.forEach(card => {
     card.addEventListener("click", () => {
@@ -158,9 +185,10 @@ function getPlatformIcon(platform) {
 }
 
 /* ==========================================================================
-   3. MODAL FOR CONTENT PLAYGROUND (CAPTION, HOOK, AUDIENCE, OBJECTIVE)
+   4. MODAL INSPECTOR: CAROUSEL SLIDERS, REEL STORYBOARDS, STORIES
    ========================================================================== */
 let previouslyFocusedElement = null;
+let activeModalSlide = 0;
 
 function initContentModal() {
   const modal = document.getElementById("content-modal");
@@ -179,7 +207,6 @@ function initContentModal() {
   if (closeBtn) closeBtn.addEventListener("click", closeModal);
   if (backdrop) backdrop.addEventListener("click", closeModal);
 
-  // Platform dismiss via ESC key
   window.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && modal.classList.contains("is-open")) {
       closeModal();
@@ -197,92 +224,238 @@ function openContentModal(id) {
 
   if (!modal || !body) return;
 
-  body.innerHTML = `
-    <div class="modal-grid">
-      <!-- Left Column: Visual Mockup Preview -->
-      <div class="modal-visual-column">
-        <div class="phone-mockup">
+  activeModalSlide = 0;
+
+  let visualHtml = "";
+
+  // Visual Type A: Multi-Slide Carousel Viewer
+  if (item.slides && item.slides.length > 0) {
+    visualHtml = `
+      <div class="modal-carousel-viewer" id="modal-carousel-viewer">
+        <div class="carousel-preview-screen">
+          <div class="screen-top-meta">
+            <span class="screen-plat-badge"><i data-lucide="${getPlatformIcon(item.platform)}"></i> ${item.platform} Carousel</span>
+            <span class="screen-slide-counter" id="modal-slide-counter">Slide 1 of ${item.slides.length}</span>
+          </div>
+          <div class="screen-main-content">
+            <div class="screen-slide-note" id="modal-slide-note">${item.slides[0].note}</div>
+            <div class="screen-slide-text" id="modal-slide-text">${item.slides[0].text}</div>
+          </div>
+          <div class="screen-bottom-meta">
+            <span>harinakshi.creates • Speculative Sample</span>
+            <span>Swipe ➔</span>
+          </div>
+        </div>
+
+        <div class="carousel-nav-toolbar">
+          <button class="carousel-prev-btn" id="modal-prev-slide" aria-label="Previous slide">
+            <i data-lucide="chevron-left"></i>
+          </button>
+          <div class="carousel-dots-row" id="modal-carousel-dots">
+            ${item.slides.map((_, idx) => `
+              <button class="c-dot ${idx === 0 ? 'active' : ''}" data-idx="${idx}" aria-label="Slide ${idx + 1}"></button>
+            `).join("")}
+          </div>
+          <button class="carousel-next-btn" id="modal-next-slide" aria-label="Next slide">
+            <i data-lucide="chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    `;
+  } 
+  // Visual Type B: Reel Storyboard with Scene-by-Scene Breakdown
+  else if (item.storyboard && item.storyboard.length > 0) {
+    visualHtml = `
+      <div class="modal-reel-viewer">
+        <div class="reel-phone-frame">
           <div class="phone-notch"></div>
-          <div class="phone-header">
-            <div class="mockup-avatar">H</div>
-            <div class="mockup-user">
-              <strong>harinakshi.creates</strong>
-              <span>${item.platform} • Speculative Sample</span>
-            </div>
-            <span class="mockup-dots">•••</span>
+          <div class="reel-top-row">
+            <span class="reel-icon-tag"><i data-lucide="film"></i> REELS CONCEPT</span>
+            <span class="reel-audio-chip"><i data-lucide="music-2"></i> ${item.audio || 'Original Audio'}</span>
           </div>
           
-          <div class="mockup-screen-art visual-${item.visualType}">
-            <div class="mockup-art-badge">${item.badge}</div>
-            <div class="mockup-art-hook">${item.hook}</div>
-            <div class="mockup-art-footer">
-              <span>Swipe for Strategy ➔</span>
+          <div class="reel-cover-box">
+            <span class="reel-cover-eyebrow">OPENING HOOK (0-2s)</span>
+            <div class="reel-cover-hook">${item.hook}</div>
+            <div class="reel-cta-overlay">${item.cta}</div>
+          </div>
+        </div>
+
+        <div class="reel-storyboard-scenes">
+          <h4 class="scenes-header"><i data-lucide="clapperboard"></i> Scene-by-Scene Structure:</h4>
+          ${item.storyboard.map(scene => `
+            <div class="storyboard-scene-card">
+              <span class="scene-label">${scene.scene}</span>
+              <p class="scene-visual"><strong>Visual:</strong> ${scene.visual}</p>
+              <p class="scene-text"><strong>On-Screen Text:</strong> "${scene.onScreenText}"</p>
+            </div>
+          `).join("")}
+        </div>
+      </div>
+    `;
+  }
+  // Visual Type C: 3 Connected Instagram Story Screens
+  else if (item.storyScreens && item.storyScreens.length > 0) {
+    visualHtml = `
+      <div class="modal-stories-sequence">
+        <h4 class="stories-seq-title"><i data-lucide="sparkles"></i> 3-Part Connected Story Sequence:</h4>
+        <div class="stories-triptych">
+          ${item.storyScreens.map(screen => `
+            <div class="story-screen-mockup">
+              <div class="story-screen-header">
+                <span class="story-avatar">H</span>
+                <span class="story-handle">harinakshi</span>
+                <span class="story-time">2h</span>
+              </div>
+              <div class="story-screen-body">
+                <span class="story-screen-num">${screen.title}</span>
+                <p class="story-screen-copy">"${screen.text}"</p>
+                <div class="story-interactive-sticker">
+                  ${screen.sticker}
+                </div>
+              </div>
+            </div>
+          `).join("")}
+        </div>
+      </div>
+    `;
+  }
+  // Visual Type D: Polished LinkedIn Post Card
+  else if (item.linkedInPost) {
+    visualHtml = `
+      <div class="modal-linkedin-viewer">
+        <div class="linkedin-post-card">
+          <div class="li-post-header">
+            <div class="li-post-avatar">HB</div>
+            <div class="li-post-author">
+              <strong>Harinakshi Baishya</strong>
+              <span>Social Media & Content Strategist</span>
+              <span class="li-post-time">1d • 🌐</span>
             </div>
           </div>
-
-          <div class="phone-actions">
-            <div class="phone-action-left">
-              <i data-lucide="heart"></i>
-              <i data-lucide="message-circle"></i>
-              <i data-lucide="send"></i>
-            </div>
-            <i data-lucide="bookmark"></i>
+          <div class="li-post-body">
+            <pre class="li-post-pre">${item.linkedInPost}</pre>
           </div>
-
-          <div class="phone-caption-preview">
+          <div class="li-post-engagement-bar">
+            <span>👍 84 reactions</span>
+            <span>💬 28 comments</span>
+          </div>
+          <div class="li-post-actions-row">
+            <span><i data-lucide="thumbs-up"></i> Like</span>
+            <span><i data-lucide="message-square"></i> Comment</span>
+            <span><i data-lucide="repeat"></i> Repost</span>
+            <span><i data-lucide="send"></i> Send</span>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+  // Visual Type E: General Creative Mockup
+  else {
+    visualHtml = `
+      <div class="modal-generic-viewer">
+        <div class="generic-phone-mockup">
+          <div class="phone-notch"></div>
+          <div class="generic-mockup-header">
+            <span class="mock-avatar">H</span>
+            <span class="mock-user">harinakshi.creates</span>
+          </div>
+          <div class="generic-screen-art visual-${item.visualType}">
+            <div class="art-badge">${item.badge}</div>
+            <div class="art-hook">${item.hook}</div>
+            <div class="art-cta">${item.cta}</div>
+          </div>
+          <div class="generic-caption-summary">
             <strong>harinakshi.creates</strong> ${item.shortDesc}
           </div>
         </div>
       </div>
+    `;
+  }
 
-      <!-- Right Column: Strategy, Copy, Hook & Intended Audience -->
-      <div class="modal-details-column">
-        <div class="modal-speculative-tag">
-          <i data-lucide="shield-alert"></i> Speculative Project Sample • Demonstrating Content & Copy Strategy
+  body.innerHTML = `
+    <div class="modal-layout-grid">
+      <!-- Left Column: Visual Content (Primary Focus) -->
+      <div class="modal-primary-visual">
+        <div class="modal-speculative-header">
+          <span class="spec-label"><i data-lucide="file-badge-2"></i> SPECULATIVE PORTFOLIO WORK</span>
+          <span class="spec-category">${item.platform.toUpperCase()} • ${item.format.toUpperCase()}</span>
+        </div>
+        
+        ${visualHtml}
+      </div>
+
+      <!-- Right Column: Strategy & Copy Breakdown -->
+      <div class="modal-strategy-details">
+        <div class="meta-tags-line">
+          <span class="badge badge-subtle">${item.platform}</span>
+          <span class="badge badge-subtle">${item.format}</span>
+          <span class="badge badge-objective">Objective: ${item.objective}</span>
         </div>
 
-        <h2 class="modal-title">${item.title}</h2>
+        <h2 class="modal-entry-title">${item.title}</h2>
 
-        <div class="modal-meta-grid">
-          <div class="meta-box">
-            <span class="meta-label">Platform & Format</span>
-            <span class="meta-value">${item.platform} • ${item.format}</span>
+        <div class="strategy-detail-section">
+          <span class="strategy-label">THE HOOK (FIRST 2 SECONDS)</span>
+          <blockquote class="hook-callout">"${item.hook}"</blockquote>
+        </div>
+
+        <div class="strategy-detail-section">
+          <span class="strategy-label">PLATFORM-READY CAPTION</span>
+          <div class="caption-display-box">
+            <pre class="caption-content">${item.caption}</pre>
           </div>
-          <div class="meta-box">
-            <span class="meta-label">Strategic Objective</span>
-            <span class="meta-value">${item.objective}</span>
-          </div>
         </div>
 
-        <div class="modal-section">
-          <h4 class="section-subhead">1. The Hook (First 3 Seconds / First Line)</h4>
-          <blockquote class="hook-quote">"${item.hook}"</blockquote>
-        </div>
-
-        <div class="modal-section">
-          <h4 class="section-subhead">2. Platform-Ready Caption & Tags</h4>
-          <div class="caption-container">
-            <pre class="caption-pre">${item.caption}</pre>
-          </div>
-        </div>
-
-        <div class="modal-section">
-          <h4 class="section-subhead">3. Call to Action (CTA)</h4>
-          <div class="cta-pill">
+        <div class="strategy-detail-section">
+          <span class="strategy-label">CALL TO ACTION (CTA)</span>
+          <div class="cta-display-pill">
             <i data-lucide="corner-down-right"></i>
             <span>${item.cta}</span>
           </div>
         </div>
 
-        <div class="modal-section">
-          <h4 class="section-subhead">4. Intended Audience Persona</h4>
-          <p class="audience-text">${item.audience}</p>
+        <div class="strategy-two-col">
+          <div class="strategy-sub-box">
+            <span class="strategy-label">TARGET AUDIENCE</span>
+            <p class="strategy-sub-text">${item.audience}</p>
+          </div>
+          <div class="strategy-sub-box">
+            <span class="strategy-label">WHY THIS CONTENT WORKS</span>
+            <p class="strategy-sub-text">${item.whyItWorks}</p>
+          </div>
         </div>
       </div>
     </div>
   `;
 
   refreshIcons();
+
+  // Attach carousel interactive buttons if present
+  if (item.slides && item.slides.length > 0) {
+    const prevBtn = document.getElementById("modal-prev-slide");
+    const nextBtn = document.getElementById("modal-next-slide");
+    const dots = document.querySelectorAll("#modal-carousel-dots .c-dot");
+    const counterEl = document.getElementById("modal-slide-counter");
+    const noteEl = document.getElementById("modal-slide-note");
+    const textEl = document.getElementById("modal-slide-text");
+
+    const updateSlide = (idx) => {
+      activeModalSlide = (idx + item.slides.length) % item.slides.length;
+      const s = item.slides[activeModalSlide];
+      if (counterEl) counterEl.textContent = `Slide ${activeModalSlide + 1} of ${item.slides.length}`;
+      if (noteEl) noteEl.textContent = s.note;
+      if (textEl) textEl.textContent = s.text;
+      dots.forEach((d, i) => d.classList.toggle("active", i === activeModalSlide));
+    };
+
+    if (prevBtn) prevBtn.addEventListener("click", () => updateSlide(activeModalSlide - 1));
+    if (nextBtn) nextBtn.addEventListener("click", () => updateSlide(activeModalSlide + 1));
+    dots.forEach(d => {
+      d.addEventListener("click", () => updateSlide(parseInt(d.getAttribute("data-idx"))));
+    });
+  }
+
   modal.classList.add("is-open");
   modal.setAttribute("aria-hidden", "false");
   document.body.classList.add("no-scroll");
@@ -292,7 +465,107 @@ function openContentModal(id) {
 }
 
 /* ==========================================================================
-   4. 30-DAY CONTENT CALENDAR (DYNAMIC TABLE & FILTERING)
+   5. HOW I WOULD MEASURE A CAMPAIGN (AUTHENTIC MEASUREMENT FRAMEWORK)
+   ========================================================================== */
+function initCampaignMeasurement() {
+  const container = document.getElementById("campaign-measurement-grid");
+  const processContainer = document.getElementById("measurement-process-flow");
+
+  if (!container || !PORTFOLIO_DATA.campaignMeasurement) return;
+
+  const data = PORTFOLIO_DATA.campaignMeasurement;
+
+  container.innerHTML = data.metrics.map(m => `
+    <div class="measurement-card">
+      <div class="measurement-header">
+        <span class="measurement-name">${m.name}</span>
+        <i data-lucide="${m.icon}" class="measurement-icon"></i>
+      </div>
+      <div class="measurement-question">${m.question}</div>
+      <p class="measurement-desc">${m.explanation}</p>
+    </div>
+  `).join("");
+
+  if (processContainer) {
+    processContainer.innerHTML = data.process.map((step, idx) => `
+      <span class="process-node">${step}</span>
+      ${idx < data.process.length - 1 ? '<span class="process-arrow">→</span>' : ''}
+    `).join("");
+  }
+
+  refreshIcons();
+}
+
+/* ==========================================================================
+   6. HOOK WRITING COMPARISON (REPLACING 36% STATISTIC)
+   ========================================================================== */
+function initHookComparison() {
+  const container = document.getElementById("hook-comparison-container");
+  if (!container || !PORTFOLIO_DATA.hookComparison) return;
+
+  const data = PORTFOLIO_DATA.hookComparison;
+
+  container.innerHTML = `
+    <div class="hook-comparison-card">
+      <div class="hook-comp-header">
+        <span class="badge badge-speculative">${data.label.toUpperCase()}</span>
+        <h3 class="hook-comp-title">${data.principle}</h3>
+      </div>
+
+      <div class="hook-comp-grid">
+        <div class="hook-box hook-weaker">
+          <div class="hook-box-tag">WEAKER HOOK</div>
+          <div class="hook-quote-text">"${data.weaker.hook}"</div>
+          <div class="hook-critique">${data.weaker.why}</div>
+        </div>
+
+        <div class="hook-box hook-stronger">
+          <div class="hook-box-tag">STRONGER HOOK</div>
+          <div class="hook-quote-text">"${data.stronger.hook}"</div>
+          <div class="hook-critique">${data.stronger.why}</div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  refreshIcons();
+}
+
+/* ==========================================================================
+   7. GLOSSIER INDEPENDENT AUDIT (VISUAL 5-PILLAR BREAKDOWN)
+   ========================================================================== */
+function initGlossierAudit() {
+  const container = document.getElementById("glossier-pillars-container");
+  if (!container || !PORTFOLIO_DATA.glossierAudit) return;
+
+  const data = PORTFOLIO_DATA.glossierAudit;
+
+  container.innerHTML = data.pillars.map(pillar => `
+    <div class="glossier-pillar-card">
+      <div class="pillar-cat-badge">${pillar.category}</div>
+      
+      <div class="pillar-row">
+        <span class="pillar-label">OBSERVATION:</span>
+        <p class="pillar-content">${pillar.observation}</p>
+      </div>
+
+      <div class="pillar-row">
+        <span class="pillar-label">OPPORTUNITY:</span>
+        <p class="pillar-content">${pillar.opportunity}</p>
+      </div>
+
+      <div class="pillar-row content-idea-row">
+        <span class="pillar-label">CONTENT IDEA:</span>
+        <p class="pillar-content idea-text">${pillar.contentIdea}</p>
+      </div>
+    </div>
+  `).join("");
+
+  refreshIcons();
+}
+
+/* ==========================================================================
+   8. 30-DAY CONTENT CALENDAR (DYNAMIC TABLE & FILTERING)
    ========================================================================== */
 function initContentCalendar() {
   const tableBody = document.getElementById("calendar-table-body");
@@ -377,7 +650,6 @@ function initContentCalendar() {
   if (typeFilter) typeFilter.addEventListener("change", renderCalendar);
   if (objectiveFilter) objectiveFilter.addEventListener("change", renderCalendar);
 
-  // Reset filter button
   const resetBtn = document.getElementById("calendar-reset-btn");
   if (resetBtn) {
     resetBtn.addEventListener("click", () => {
@@ -391,7 +663,7 @@ function initContentCalendar() {
 }
 
 /* ==========================================================================
-   5. COPYWRITING LAB ("WORDS MATTER")
+   9. COPYWRITING LAB ("WORDS MATTER")
    ========================================================================== */
 function initCopywritingLab() {
   const tabs = document.querySelectorAll(".copy-tab");
@@ -407,7 +679,7 @@ function initCopywritingLab() {
       <div class="copy-card-inner">
         <div class="copy-card-header">
           <span class="copy-tag">${sample.label}</span>
-          <span class="copy-spec-badge">Copy Breakdown</span>
+          <span class="copy-spec-badge">Copywriting Example</span>
         </div>
 
         <div class="copy-hook-box">
@@ -428,7 +700,7 @@ function initCopywritingLab() {
         <div class="copy-why-box">
           <div class="why-header">
             <i data-lucide="lightbulb"></i>
-            <strong>Why This Works (Psychology & Retention):</strong>
+            <strong>Why This Works (Audience Psychology):</strong>
           </div>
           <p class="why-text">${sample.whyItWorks}</p>
         </div>
@@ -446,12 +718,11 @@ function initCopywritingLab() {
     });
   });
 
-  // Render initial tab (Educational)
   renderCopySample("EDUCATIONAL");
 }
 
 /* ==========================================================================
-   6. STRATEGY 5-STEP PROCESS FLOW
+   10. STRATEGY 5-STEP PROCESS FLOW
    ========================================================================== */
 function initStrategyFlow() {
   const stepCards = document.querySelectorAll(".strategy-step-card");
@@ -464,7 +735,7 @@ function initStrategyFlow() {
 }
 
 /* ==========================================================================
-   7. INTERACTIVE SOCIAL MEDIA AUDIT CHECKLIST
+   11. INTERACTIVE SOCIAL MEDIA AUDIT CHECKLIST
    ========================================================================== */
 function initAuditChecklist() {
   const container = document.getElementById("audit-checklist-container");
@@ -502,7 +773,7 @@ function initAuditChecklist() {
     const pct = Math.round((checkedCount / totalItems) * 100);
 
     if (scoreCounter) {
-      scoreCounter.textContent = `${checkedCount} / ${totalItems} Passed (${pct}%)`;
+      scoreCounter.textContent = `${checkedCount} / ${totalItems} Criteria Met (${pct}%)`;
     }
     if (progressBar) {
       progressBar.style.width = `${pct}%`;
@@ -519,7 +790,7 @@ function initAuditChecklist() {
 }
 
 /* ==========================================================================
-   8. CASE STUDY 01 INTERACTIVE CAROUSEL SIMULATOR
+   12. CASE STUDY 01 INTERACTIVE CAROUSEL SIMULATOR
    ========================================================================== */
 function initCaseStudy01Carousel() {
   const slides = [
@@ -545,7 +816,7 @@ function initCaseStudy01Carousel() {
       num: "04 / 04",
       tag: "The Conversation CTA",
       hook: "Save this framework for your Monday ritual.",
-      desc: "Utility-focused CTA prompting bookmark behavior, teaching the algorithm that this post delivers high value."
+      desc: "Utility-focused CTA prompting bookmark behavior, signaling high content value."
     }
   ];
 
@@ -590,17 +861,7 @@ function initCaseStudy01Carousel() {
 }
 
 /* ==========================================================================
-   9. ANALYTICS CHARTS INITIALIZATION
-   ========================================================================== */
-function initAnalytics() {
-  if (window.AnalyticsVisualizer) {
-    const visualizer = new window.AnalyticsVisualizer();
-    visualizer.init();
-  }
-}
-
-/* ==========================================================================
-   10. CONTACT BUTTON ACTIONS & EMAIL COPY
+   13. CONTACT BUTTON ACTIONS & EMAIL COPY
    ========================================================================== */
 function initContactActions() {
   const copyBtn = document.getElementById("copy-email-btn");
@@ -608,21 +869,20 @@ function initContactActions() {
 
   if (copyBtn) {
     copyBtn.addEventListener("click", () => {
-      const emailNotice = "Please connect via LinkedIn or send an inquiry to discuss opportunities!";
+      const emailNotice = "Please connect via LinkedIn or message to discuss opportunities!";
       navigator.clipboard.writeText("contact.harinakshi@placeholder.com").then(() => {
-        showToast("Email placeholder copied! Inquiries welcome via LinkedIn.");
+        showToast("Email placeholder copied! Direct inquiries welcome via LinkedIn.");
       }).catch(() => {
         showToast(emailNotice);
       });
     });
   }
 
-  // Handle contact form submission demo
   const contactForm = document.getElementById("portfolio-contact-form");
   if (contactForm) {
     contactForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      showToast("Thank you for reaching out! Portfolio demo submission received.");
+      showToast("Thank you for reaching out! Portfolio message simulation sent.");
       contactForm.reset();
     });
   }

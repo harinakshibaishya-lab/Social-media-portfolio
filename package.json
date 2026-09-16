@@ -4,10 +4,8 @@
   "description": "Recruiter-facing Social Media & Content Strategist Portfolio for Harinakshi Baishya",
   "main": "index.html",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "serve": "npx serve ."
+    "start": "node server.js",
+    "dev": "node server.js"
   },
   "keywords": [
     "social-media",
@@ -17,8 +15,5 @@
     "campaigns"
   ],
   "author": "Harinakshi Baishya",
-  "license": "MIT",
-  "devDependencies": {
-    "vite": "^6.0.0"
-  }
+  "license": "MIT"
 }

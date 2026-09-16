@@ -1,9 +1,10 @@
 /**
  * Harinakshi Baishya - Social Media & Content Strategist Portfolio
- * Data Layer: Showcase Items, 30-Day Content Calendar, Analytics, Case Studies, Trends, and Audit Checklist
+ * Data Layer: Showcase Items, 30-Day Content Calendar, Measurement Framework, Case Studies, Trends, and Audit Checklist
  * 
- * NOTE: All campaign figures and project examples are clearly labeled as speculative,
- * demo data, or independent portfolio analyses for candidate demonstration purposes.
+ * NOTE: All campaign projects and samples are clearly labeled as speculative work,
+ * portfolio concepts, or independent analyses for candidate evaluation.
+ * NO fabricated performance statistics or fake follower numbers are included.
  */
 
 const PORTFOLIO_DATA = {
@@ -34,24 +35,167 @@ const PORTFOLIO_DATA = {
     {
       title: "CURIOUS",
       tagline: "Audience-first listening",
-      description: "I research audiences, trends and active community conversations before creating a single draft."
+      description: "I research audiences, trends and active community conversations before drafting content."
     },
     {
       title: "STRATEGIC",
       tagline: "Purpose over posting",
-      description: "Every content idea should have a purpose, a defined content pillar, and a measurable goal."
+      description: "Every content idea should have a purpose, a defined pillar, and a clear next step."
     },
     {
       title: "CREATIVE",
       tagline: "Fresh hooks on familiar ideas",
-      description: "I look for fresh, culturally resonant ways to communicate familiar brand values without clichés."
+      description: "I look for fresh, culturally resonant ways to communicate brand values without relying on clichés."
     },
     {
       title: "DATA-AWARE",
-      tagline: "Iterative feedback loops",
-      description: "I use performance signals like saves and completion rates to understand what to refine and double down on."
+      tagline: "Measuring what matters",
+      description: "I use signals like saves, shares, and watch time to understand what to refine and double down on."
     }
   ],
+
+  // Section 7: "From Brief to Post" Content Creation Workflow
+  workflowSteps: [
+    {
+      number: "01",
+      title: "BRIEF",
+      question: "What are we communicating?",
+      description: "Identify the core brand message, key product feature, or campaign objective. Strip away jargon so the message is crystal clear."
+    },
+    {
+      number: "02",
+      title: "AUDIENCE",
+      question: "Who needs to hear it?",
+      description: "Define the specific tension, routine, or question the viewer has. Focus on their perspective rather than the brand's ego."
+    },
+    {
+      number: "03",
+      title: "HOOK",
+      question: "Why should they stop scrolling?",
+      description: "Craft an opening line or visual frame that sparks immediate curiosity, empathy, or tension within the first 2 seconds."
+    },
+    {
+      number: "04",
+      title: "CONTENT",
+      question: "What is the clearest way to communicate it?",
+      description: "Choose the native platform format: a 5-slide carousel for education, a punchy Reel for demonstration, or interactive Stories for conversation."
+    },
+    {
+      number: "05",
+      title: "CTA",
+      question: "What should they do next?",
+      description: "Give a single, low-friction next step: bookmarking for later, tagging a peer, voting in a poll, or exploring a link in bio."
+    },
+    {
+      number: "06",
+      title: "LEARN",
+      question: "What does the response tell us?",
+      description: "Analyze qualitative comments and quantitative saves/shares to understand what resonated and improve the next content sprint."
+    }
+  ],
+
+  // Section 1: How I Would Measure a Campaign (No fabricated numbers)
+  campaignMeasurement: {
+    heading: "How I Would Measure a Campaign",
+    subtext: "I focus on the metrics that connect content performance to the campaign objective.",
+    metrics: [
+      {
+        name: "REACH",
+        question: "What it tells me:",
+        explanation: "How many people were exposed to the content. Useful for assessing top-of-funnel campaign awareness and audience size.",
+        icon: "users"
+      },
+      {
+        name: "ENGAGEMENT",
+        question: "What it tells me:",
+        explanation: "Whether people are interacting with the content through likes, comments, and sticker taps rather than passively scrolling past.",
+        icon: "message-circle"
+      },
+      {
+        name: "SAVES",
+        question: "What it tells me:",
+        explanation: "Whether the content is useful enough to return to. My primary signal for high-value educational carousels and checklists.",
+        icon: "bookmark"
+      },
+      {
+        name: "SHARES",
+        question: "What it tells me:",
+        explanation: "Whether the content is valuable or relatable enough to pass along to a friend or coworker via DM.",
+        icon: "share-2"
+      },
+      {
+        name: "WATCH TIME",
+        question: "What it tells me:",
+        explanation: "Whether short-form video is holding audience attention past the opening hook and through the key takeaway.",
+        icon: "clock"
+      },
+      {
+        name: "PROFILE VISITS",
+        question: "What it tells me:",
+        explanation: "Whether content creates enough interest to explore the brand bio, story highlights, and pinned posts.",
+        icon: "user-check"
+      },
+      {
+        name: "CTR (Click-Through Rate)",
+        question: "What it tells me:",
+        explanation: "Whether the content is driving people toward the intended next step, such as a challenge signup or landing page.",
+        icon: "mouse-pointer"
+      }
+    ],
+    process: ["POST", "MEASURE", "LEARN", "IMPROVE"]
+  },
+
+  // Section 2: Hook Writing Comparison (Replacing 36% statistic)
+  hookComparison: {
+    label: "Hook-writing example",
+    principle: "Strong hooks give viewers a reason to keep watching.",
+    weaker: {
+      hook: "Here are some social media tips.",
+      why: "Generic and passive. Gives the reader no immediate tension, stakes, or reason to stop scrolling."
+    },
+    stronger: {
+      hook: "Your content isn't boring — your first 2 seconds might be.",
+      why: "Addresses a real creator anxiety directly, reframes the problem, and creates immediate curiosity."
+    }
+  },
+
+  // Section 5: Glossier Independent Audit (Visual & Observation -> Opportunity -> Content Idea)
+  glossierAudit: {
+    disclaimer: "This analysis is for portfolio demonstration purposes and is not affiliated with or produced for Glossier.",
+    label: "Independent Portfolio Analysis",
+    pillars: [
+      {
+        category: "PROFILE",
+        observation: "Strong, iconic visual brand identity with recognizable pink avatar and clean handle.",
+        opportunity: "Potential opportunity to direct bio traffic toward an interactive routine finder rather than a generic shop link.",
+        contentIdea: "'Find Your 2-Minute Morning Routine' — an interactive Story quiz matching skin types to 3 core products."
+      },
+      {
+        category: "CONTENT",
+        observation: "Feed features high-gloss studio packshots, which look editorial but feel less tactile.",
+        opportunity: "Could test showing real product wear in natural daylight across varied skin textures and weather conditions.",
+        contentIdea: "'Boy Brow vs 8 Hours of Rain & Commute' — an honest, unedited durability test on short-form video."
+      },
+      {
+        category: "ENGAGEMENT",
+        observation: "Followers frequently ask shade-matching questions and reminisce about discontinued favorites in comment threads.",
+        opportunity: "I would explore turning recurring comment questions directly into video responses and community voting formats.",
+        contentIdea: "'Community Vault: Vote which archived shade makes a guest return' — interactive story poll series."
+      },
+      {
+        category: "DISCOVERY",
+        observation: "Strong organic brand mentions on TikTok, but captions on Instagram rarely target practical search queries.",
+        opportunity: "Potential opportunity to optimize captions and spoken video text with specific beauty search terms.",
+        contentIdea: "'How to apply Cloud Paint for your specific cheekbone shape' — search-first educational tutorial."
+      },
+      {
+        category: "CONVERSION",
+        observation: "Call-to-actions are often soft ('Shop now via link in bio') without highlighting bundle utility.",
+        opportunity: "Could explore pairing step-by-step routine carousels with beginner-friendly 3-product curated sets.",
+        contentIdea: "'The 3-Step No-Makeup Routine Breakdown: What you actually need vs what is optional.'"
+      }
+    ]
+  },
 
   tools: [
     { name: "Canva", category: "Visual Design & Layout", status: "Daily Workflow", icon: "palette" },
@@ -72,13 +216,13 @@ const PORTFOLIO_DATA = {
       hook: "Your audience isn't ignoring you. They may just not understand why they should care.",
       body: "When engagement stalls, our first instinct is to blame the algorithm. But most of the time, the message was written for the brand's ego, not the reader's day-to-day tension. The pivot? Swap 'look what we built' for 'here is the 10-minute fix for what annoyed you today'.",
       cta: "Save this for your next content planning session.",
-      whyItWorks: "Bypasses defensive reactions by reframing a painful creator problem into an actionable shift in reader psychology."
+      whyItWorks: "Bypasses defensive reactions by reframing a creator problem into an actionable shift in reader psychology."
     },
     {
       type: "RELATABLE",
       label: "Community & Humor",
       hook: "POV: You spent 2 hours making the post and someone says, 'Just make it viral.'",
-      body: "Nothing tests team patience quite like the phrase 'can we make it trend by 4 PM?' Great content isn't lightning in a bottle—it's consistent audience empathy, crisp visual hooks, and zero fluff.",
+      body: "Nothing tests patience quite like the phrase 'can we make it trend by 4 PM?' Great content isn't lightning in a bottle—it's consistent audience empathy, crisp visual hooks, and zero fluff.",
       cta: "Tell us your experience below in the comments.",
       whyItWorks: "Uses shared industry friction and situational humor to spark spontaneous peer comments and direct message forwards."
     },
@@ -105,14 +249,14 @@ const PORTFOLIO_DATA = {
       trend: "POV Format",
       category: "Perspective Framing",
       idea: "POV: You finally stop creating content for everyone.",
-      execution: "Short 7-second Reel showing a busy social media planner striking out generic content ideas and replacing them with 3 hyperspecific audience problem statements.",
+      execution: "Short 7-second Reel showing a creator deleting generic inspirational quotes and replacing them with 3 specific customer problems.",
       explanation: "Trends should support the brand message rather than replace it. POV works when it puts the target follower directly into an instantly recognizable scenario."
     },
     {
       trend: "Silent Review / ASMR Visual Style",
       category: "Sensory Demonstration",
       idea: "Silent Product Review: What 7 days of morning calm actually feels like.",
-      execution: "Low-distraction, text-on-screen Reel with natural ambient sounds (coffee pouring, notebook opening, subtle product texture) letting aesthetic clarity speak.",
+      execution: "Low-distraction, text-on-screen Reel with natural ambient sounds (coffee pouring, notebook opening) letting aesthetic clarity speak.",
       explanation: "Cuts through noisy, hyper-edited feeds by offering deliberate quiet and tactile product transparency."
     },
     {
@@ -120,7 +264,7 @@ const PORTFOLIO_DATA = {
       category: "Expert Breakdown",
       idea: "Breaking down why this everyday lifestyle ad stopped our scroll.",
       execution: "Presenter stands in front of a screenshot of an effective content hook, pointing out the exact typography choices and psychological tension driving the comments.",
-      explanation: "Positions the brand or strategist as an authoritative, generous educator dissecting real-world culture."
+      explanation: "Positions the strategist as an authoritative, generous educator dissecting real-world culture."
     },
     {
       trend: "We Tested X So You Don't Have To",
@@ -131,195 +275,284 @@ const PORTFOLIO_DATA = {
     }
   ],
 
-  // 12 Rich Content Playground Items
+  // 12 Visual Content Playground Items (Items A through L)
   contentPlayground: [
     {
       id: "cp-1",
-      title: "5 Things Your Audience Actually Wants From Your Content",
+      code: "A",
+      title: "5 Signs Your Brand Needs a Better Content Strategy",
       platform: "Instagram",
       category: "Instagram",
-      format: "Carousel (10 Slides)",
+      format: "Carousel (5 Slides)",
       objective: "Education",
-      shortDesc: "A swipeable breakdown addressing creator burn-out and shifting focus back to audience utility.",
-      hook: "Stop guessing what to post. Here are the only 5 things your audience actually stops their scroll for.",
-      caption: `Swipe through to audit your next post before you hit publish 📲\n\nMost brand content fails not because it looks bad, but because it asks for attention without offering utility in return.\n\nHere's what your followers actually look for:\n1. Validation: "I thought I was the only one feeling this."\n2. Practical shortcuts: "This saves me 30 minutes tomorrow."\n3. Curated clarity: "This makes a complex concept simple."\n4. Perspective shifts: "I never looked at it that way before."\n5. Entertainment with relevance: "This speaks my language."\n\nWhich of these 5 does your current top post deliver on?\n\n#ContentStrategy #SocialMediaTips #AudienceFirst #ContentMarketing #SocialMediaExecutive`,
-      cta: "Save this carousel to reference during your Monday content sprint.",
-      audience: "Solopreneurs, small brand owners, and junior content creators looking for actionable engagement frameworks.",
+      shortDesc: "A 5-slide visual audit helping small brands diagnose why their social media feels chaotic.",
+      hook: "5 Signs Your Brand Needs a Better Content Strategy",
+      slides: [
+        { slideNum: 1, text: "5 Signs Your Brand Needs a Better Content Strategy", note: "Cover Slide • Clean Contrast" },
+        { slideNum: 2, text: "You're posting without a clear audience in mind.", note: "Pillar: Audience Clarity" },
+        { slideNum: 3, text: "Every post feels like it was designed by a completely different brand.", note: "Pillar: Visual Consistency" },
+        { slideNum: 4, text: "You're creating content, but not creating conversations.", note: "Pillar: Engagement Depth" },
+        { slideNum: 5, text: "Your content needs a system, not just more posts.", note: "The Solution & Strategic Takeaway" }
+      ],
+      caption: `Swipe through to audit your content before your next batch sprint 📲\n\nMost brand accounts don't have a content problem—they have a system problem.\n\nWhen you stop treating social like a daily chore and start treating it like a media publication with clear recurring pillars, three things happen:\n1. Your audience knows what to expect\n2. Your team saves 5+ hours of weekly planning time\n3. Your comments shift from generic emojis to genuine questions\n\nWhich of these 5 signs hits closest to home right now?\n\n#ContentStrategy #SocialMediaTips #AudienceFirst #BrandBuilding #SocialMediaExecutive`,
+      cta: "Save this for your next content planning session.",
+      audience: "Brand owners, marketing coordinators, and social media managers looking for structure.",
+      whyItWorks: "Diagnoses pain points with clarity and zero fluff, making it an immediate candidate for saves and bookmarking.",
       visualType: "carousel",
       badge: "Educational Carousel"
     },
     {
       id: "cp-2",
+      code: "B",
       title: "Stop Posting. Start Communicating.",
       platform: "Instagram",
       category: "Instagram",
-      format: "Carousel (7 Slides)",
+      format: "Carousel (5 Slides)",
       objective: "Engagement",
-      shortDesc: "Challenging the 'daily posting vanity' myth with a conversation-first engagement strategy.",
-      hook: "Posting every day with zero replies isn't consistency—it's talking to an empty room.",
-      caption: `Are you posting to check off a box, or to open a conversation?\n\nConsistency on social media isn't just about scheduling 7 posts a week. True consistency is:\n• Consistently clear messaging\n• Consistently replying in the comments\n• Consistently asking questions your audience wants to answer\n\nIf you cut your output in half and doubled the depth of each post, what would happen to your community?\n\nDrop your honest take below 👇\n\n#CommunityBuilding #SocialMediaStrategy #BrandVoice #EngagementTips`,
-      cta: "Share your perspective in the comments below: Volume or Depth?",
-      audience: "Community managers, lifestyle brands, and marketing coordinators.",
+      shortDesc: "Challenging the daily posting burnout myth with a conversation-first engagement model.",
+      hook: "Stop Posting. Start Communicating.",
+      slides: [
+        { slideNum: 1, text: "Stop Posting. Start Communicating.", note: "Cover Slide • Editorial Headline" },
+        { slideNum: 2, text: "Posting 7 days a week to zero replies isn't consistency.", note: "The Tension Point" },
+        { slideNum: 3, text: "A broadcast talks AT people. Social content talks WITH people.", note: "The Perspective Shift" },
+        { slideNum: 4, text: "Ask questions your audience actually has an opinion on.", note: "Actionable Recommendation" },
+        { slideNum: 5, text: "Cut your volume in half. Double the conversation depth.", note: "The Core Rule" }
+      ],
+      caption: `Are you posting to check off a calendar box, or to open a conversation?\n\nConsistency on social media isn't just about output volume. True consistency is:\n• Consistently clear positioning\n• Consistently showing up in the comments\n• Consistently respecting your audience's attention\n\nIf you cut your output in half this week and doubled the thought behind each caption, what would happen to your community?\n\nDrop your honest take below 👇\n\n#CommunityBuilding #SocialMediaStrategy #BrandVoice #EngagementTips`,
+      cta: "Which habit is your team shifting this month?",
+      audience: "Community managers, lifestyle brands, and marketing leaders.",
+      whyItWorks: "Challenges an industry sacred cow with empathy, sparking spontaneous comments and debate.",
       visualType: "carousel",
       badge: "Strategy Carousel"
     },
     {
       id: "cp-3",
+      code: "C",
       title: "POV: You Finally Understand Your Audience",
       platform: "Reels",
       category: "Reels",
       format: "Reel (12 Seconds)",
       objective: "Awareness",
-      shortDesc: "Relatable humor capturing the moment content shifts from generic quotes to real problem-solving.",
-      hook: "POV: You delete the generic motivational quote and write about the one thing keeping your client up at night.",
-      caption: `That moment when the lightbulb clicks 💡\n\nThe second you stop trying to sound 'professional' and start sounding helpful, comments start rolling in.\n\nDrop a ❤️ if you've rewritten a caption 5 times today to get the hook just right.\n\n#SocialMediaHumor #ContentCreator #AudienceInsight #MarketingReels`,
-      cta: "Double tap if you felt this in your soul today.",
-      audience: "Social media managers and creative agency executives.",
+      shortDesc: "Relatable short-form video capturing the moment content shifts from generic quotes to real problem-solving.",
+      hook: "POV: You stopped creating content for everyone.",
+      storyboard: [
+        { scene: "Scene 01 (0-3s)", visual: "Creator staring at a generic inspirational quote graphic with 12 likes, hitting delete.", onScreenText: "Deleting the quote nobody asked for..." },
+        { scene: "Scene 02 (4-8s)", visual: "Opening real customer DMs and writing down the exact problem sentence keeping them up at night.", onScreenText: "Writing down the ONE problem they actually asked about..." },
+        { scene: "Scene 03 (9-12s)", visual: "Publishing a 10-second solution; phone screen lights up with genuine notifications.", onScreenText: "When you speak to one specific problem, comments roll in." }
+      ],
+      audio: "Original Audio • Vela Focus Ambient",
+      caption: `That moment when the lightbulb clicks 💡\n\nThe second you stop trying to sound 'professional' and start sounding helpful, comments start rolling in.\n\nDouble tap if you've rewritten a caption 5 times today to get the hook right.\n\n#SocialMediaHumor #ContentCreator #AudienceInsight #MarketingReels`,
+      cta: "Know your audience. Then create for them.",
+      audience: "Social media executives and creative agency creators.",
+      whyItWorks: "Uses relatable creator friction and concise visual comedy to drive peer forwards and profile visits.",
       visualType: "reel",
       badge: "Short-Form Reel"
     },
     {
       id: "cp-4",
-      title: "3 Content Mistakes Brands Make on Short-Form Video",
+      code: "D",
+      title: "3 Content Mistakes Brands Make",
       platform: "Reels",
       category: "Reels",
       format: "Reel (24 Seconds)",
       objective: "Education",
-      shortDesc: "Rapid-fire visual dissection of why viewers drop off within the first 2 seconds.",
-      hook: "If your Reels are dropping off at second 1.8, you're making one of these 3 common mistakes.",
-      caption: `Let's fix your short-form retention curve 📈\n\n1. The 'Intro Trap': Saying 'Hey guys so today...' instead of showing the outcome immediately.\n2. Wall of Text: Putting 40 words on screen with 0.8s reading time.\n3. Weak Sign-off: Ending with 'Like for part 2' instead of an intriguing conversational question.\n\nSave this for your next video shoot!\n\n#ReelsTips #ShortFormVideo #ContentCreation #VideoStrategy #SocialMediaManager`,
-      cta: "Save this checklist for your next video batch recording session.",
+      shortDesc: "Rapid-fire visual dissection of why viewers scroll away within the opening 2 seconds.",
+      hook: "If your short-form video stops getting views after 2 seconds, you're probably making one of these 3 mistakes.",
+      storyboard: [
+        { scene: "Scene 01 (0-6s)", visual: "Talking-head creator says 'Hi guys so today...' vs Jump cut directly into the finished solution.", onScreenText: "Mistake 1: The 'Hi guys' intro trap. Jump directly into the takeaway." },
+        { scene: "Scene 02 (7-14s)", visual: "Screen filled with 45 words of text in tiny font that disappears before anyone can read it.", onScreenText: "Mistake 2: Wall of text. Keep on-screen text under 8 words per slide." },
+        { scene: "Scene 03 (15-24s)", visual: "Video ends with awkward silence vs an intriguing conversational question.", onScreenText: "Mistake 3: Weak sign-off. End with a prompt they actually want to answer." }
+      ],
+      audio: "Original Audio • Crisp Beat",
+      caption: `Let's fix your short-form retention curve 📈\n\n1. The 'Intro Trap': Saying 'Hey guys so today...' instead of showing the outcome immediately.\n2. Wall of Text: Putting 40 words on screen with 0.8s reading time.\n3. Weak Sign-off: Ending with 'Like for part 2' instead of an intriguing conversational question.\n\nSave this checklist before shooting your next batch!\n\n#ReelsTips #ShortFormVideo #ContentCreation #VideoStrategy #SocialMediaManager`,
+      cta: "Save this checklist before shooting your next batch.",
       audience: "Brand marketing teams experimenting with TikTok and Instagram Reels.",
+      whyItWorks: "Offers immediate diagnostic clarity with side-by-side good vs bad visual demonstrations.",
       visualType: "reel",
       badge: "Diagnostic Reel"
     },
     {
       id: "cp-5",
-      title: "This or That? Interactive Story Series",
+      code: "E",
+      title: "Instagram Story Sequence (3-Part)",
       platform: "Stories",
       category: "Stories",
-      format: "Story (3-Part Tap Sequence)",
+      format: "Story Sequence (3 Screens)",
       objective: "Engagement",
-      shortDesc: "Frictionless micro-poll stickers designed to train the algorithm and capture audience sentiment.",
-      hook: "Quick team vote before our morning planning meeting: Which morning habit are you actually doing?",
-      caption: `Interactive Instagram Story Series:\n\nSlide 1: Poll Sticker [5:00 AM Coffee vs 7:30 AM Lemon Water]\nSlide 2: Poll Sticker [Digital Notion Planner vs Physical Paper Journal]\nSlide 3: Slider Sticker [How ready are you for Monday? 0% - 100%]\n\nOutcome: High-volume sticker taps signal strong account affinity to the algorithm, boosting visibility for subsequent product stories.`,
+      shortDesc: "A connected 3-part Story series training the algorithm through frictionless poll and question stickers.",
+      hook: "This or That? Quick morning debate before our editorial meeting.",
+      storyScreens: [
+        { screen: 1, title: "Screen 1: The Context", text: "This or That? Quick team debate before our morning planning meeting...", sticker: "Tap to Vote →" },
+        { screen: 2, title: "Screen 2: The Interactive Poll", text: "Educational deep dives OR relatable day-in-the-life content?", sticker: "Poll Sticker: [Deep Dives 🧠] vs [Relatable ☕]" },
+        { screen: 3, title: "Screen 3: The Question Box", text: "Tell us what you want to see next on our feed this month!", sticker: "Question Box: 'Drop the #1 content challenge you're solving this week 👇'" }
+      ],
+      caption: `Interactive Instagram Story Sequence:\n\nSlide 1: Setting the conversational context.\nSlide 2: Frictionless 1-tap poll sticker.\nSlide 3: Open question box collecting direct audience vocabulary for future calendar posts.\n\nOutcome: High sticker taps signal account affinity to the algorithm while providing crowdsourced topics.`,
       cta: "Tap your choice on the sticker above!",
-      audience: "Lifestyle community members and morning wellness enthusiasts.",
+      audience: "Followers looking for approachable, low-friction interactions.",
+      whyItWorks: "Progressive engagement: starts with a simple binary choice (Slide 2) before asking for open text (Slide 3).",
       visualType: "story",
       badge: "Interactive Stories"
     },
     {
       id: "cp-6",
-      title: "Ask Me Anything: Content Planning Edition",
-      platform: "Stories",
-      category: "Stories",
-      format: "Story (Q&A Box + Video Responses)",
-      objective: "Community",
-      shortDesc: "Open question box gathering real audience dilemmas to fuel future editorial calendars.",
-      hook: "Stuck on your October content pillars? Ask me your biggest roadblock below 💬",
-      caption: `Q&A Story Strategy:\n\nSticker: Question Box ('What is the hardest part about planning your weekly content?')\nFollow-up: 4 video response stories breaking down user submissions into 3-step action points.\nStrategic Purpose: Crowd-sources actual customer vocabulary and pain points directly into the content pipeline.`,
-      cta: "Drop your question into the box—answering all afternoon!",
-      audience: "Followers looking for approachable, actionable feedback.",
-      visualType: "story",
-      badge: "Community Q&A"
+      code: "F",
+      title: "Consistency Doesn't Mean Posting Every Day",
+      platform: "LinkedIn",
+      category: "LinkedIn",
+      format: "Text Post",
+      objective: "Awareness",
+      shortDesc: "Thought leadership post dissecting sustainable professional cadence over algorithmic burnout.",
+      hook: "Consistency doesn't mean posting every day.",
+      linkedInPost: `Consistency doesn't mean posting every day.
+
+It means:
+• Consistently clear positioning
+• Consistently useful takeaways
+• Consistently showing up in the comments
+
+Posting 7 shallow updates a week burns out your team and trains your audience to scroll past.
+
+Posting 3 thoughtful, well-researched pieces builds a reputation people respect.
+
+Quality compounds. Noise fades.
+
+What does consistency look like for your brand?`,
+      caption: `Consistency on social media has been confused with frequency of output.\n\nTrue consistency isn't about rushing out an update every 24 hours. It's about ensuring that every single time someone sees your name in their feed, they know it will be worth their 30 seconds.\n\nWhat does consistency look like for your brand?`,
+      cta: "What does consistency look like for your brand?",
+      audience: "Marketing leaders, founders, and creative strategists.",
+      whyItWorks: "Strong bullet-point cadence and conversational closing question make it easy to read and discuss.",
+      visualType: "linkedin",
+      badge: "LinkedIn Post"
     },
     {
       id: "cp-7",
-      title: "Why Consistency Matters More Than Posting Every Day",
+      code: "G",
+      title: "From Followers to Community",
       platform: "LinkedIn",
       category: "LinkedIn",
-      format: "Text Post + Infographic",
-      objective: "Awareness",
-      shortDesc: "Thought leadership post dissecting sustainable professional cadence over algorithmic burnout.",
-      hook: "Posting 7 days a week with shallow ideas does not build brand equity. Posting 3 times a week with depth does.",
-      caption: `We have romanticized 'the daily grind' on social media to the point where quality is treated as an afterthought.\n\nHere is what happens when you switch from 7 shallow posts to 3 high-leverage posts:\n\n1. Research time expands: You have time to look at real customer inquiries.\n2. Visual craft improves: Clear typography replaces hurried Canva templates.\n3. Community attention compounds: Readers start anticipating your posts because every single one contains a takeaway.\n\nTrue consistency isn't frequency of output. It is consistency of quality, viewpoint, and audience respect.\n\nWhat is your preferred weekly posting rhythm?`,
-      cta: "Let's discuss in the comments: How many times per week feels sustainable for your team?",
-      audience: "Founders, marketing leads, recruiters, and creative professionals.",
-      visualType: "linkedin",
-      badge: "LinkedIn Leadership"
+      format: "Carousel (5 Slides)",
+      objective: "Education",
+      shortDesc: "A strategic slide deck showing how passive viewers transform into vocal brand advocates.",
+      hook: "From Followers to Community: The 4-Stage Content Moat",
+      slides: [
+        { slideNum: 1, text: "From Followers to Community: The 4-Stage Content Moat", note: "Cover Slide • Strategic Whitepaper Style" },
+        { slideNum: 2, text: "Stage 1: The Scroller\nSees your post in their feed, consumes passively, moves on.", note: "Top of Funnel • Reach" },
+        { slideNum: 3, text: "Stage 2: The Saver\nFinds practical utility in your framework and bookmarks it for later.", note: "Utility & Authority" },
+        { slideNum: 4, text: "Stage 3: The Contributor\nShares their own perspective or question in your comments.", note: "Community Dialogue" },
+        { slideNum: 5, text: "Stage 4: The Advocate\nTags colleagues, forwards your post via DM, and defends your POV.", note: "Brand Equity Moat" }
+      ],
+      caption: `Followers are a vanity metric. Community members are a brand moat.\n\nMost brand content is designed exclusively for Stage 1 (broad views). The most resilient brands design content specifically to nurture Stages 2 through 4.\n\nWhich stage is your current content designed for?`,
+      cta: "Which stage is your current content designed for?",
+      audience: "Brand directors and social media executives.",
+      whyItWorks: "Gives marketing teams a concrete shared vocabulary to assess the depth of their content.",
+      visualType: "carousel",
+      badge: "LinkedIn Carousel"
     },
     {
       id: "cp-8",
-      title: "From Follower to Community: The 4-Tier Funnel",
-      platform: "LinkedIn",
-      category: "LinkedIn",
-      format: "Carousel (6 PDF Slides)",
-      objective: "Education",
-      shortDesc: "A strategic framework showing how casual viewers transform into brand advocates.",
-      hook: "Followers are a vanity metric. Community members are a brand moat.",
-      caption: `Swipe through the 4 stages of audience maturity:\n\nTier 1: The Passive Lurker (Views, rarely interacts)\nTier 2: The Practical Saver (Bookmarks frameworks for later)\nTier 3: The Active Contributor (Comments with their own experiences)\nTier 4: The Brand Advocate (Tags colleagues and defends your POV)\n\nMost content is designed solely to attract Tier 1. The best brands design content specifically to nurture Tiers 2 through 4.\n\nWhich tier is your current social strategy targeting?`,
-      cta: "Save this PDF slide deck for your team's next brand strategy meeting.",
-      audience: "Brand directors, social executives, and digital marketing leaders.",
-      visualType: "carousel",
-      badge: "Strategic Framework"
+      code: "H",
+      title: "Product Storytelling: The Morning Focus Elixir",
+      platform: "Instagram",
+      category: "Instagram",
+      format: "Static Post + Narrative",
+      objective: "Conversion",
+      shortDesc: "Demonstrating how to sell the story, human stakes, and ritual behind a product rather than feature-listing.",
+      hook: "Why we spent 8 months testing 14 formulations just to eliminate the 2 PM caffeine crash.",
+      caption: `Behind every jar of Vela Morning Focus is an obsession with how calm energy feels.\n\nMost morning drinks give you a 30-minute heart spike followed by a 2:00 PM desk collapse. We took 8 months to formulate with organic ceremonial matcha, L-theanine, and lion's mane to create steady, jitter-free clarity.\n\nNo artificial sweeteners.\nNo midday jitters.\nJust 3 quiet minutes of morning ritual that carry you through the day.\n\nDiscover the morning ritual blend via the link in bio 🌿`,
+      cta: "Discover the morning ritual blend via the link in our bio.",
+      audience: "Wellness-minded professionals seeking clean energy alternatives to coffee.",
+      whyItWorks: "Anchors the product in human experience (avoiding the afternoon crash) rather than clinical chemical jargon.",
+      visualType: "static",
+      badge: "Product Narrative"
     },
     {
       id: "cp-9",
-      title: "30 Days of Better Mornings: Campaign Announcement",
+      code: "I",
+      title: "Community Post: The Sunday Reset Protocol",
+      platform: "Instagram",
+      category: "Instagram",
+      format: "Community Discussion Card",
+      objective: "Community",
+      shortDesc: "A weekly recurring prompt designed to foster peer conversations and supportive comments.",
+      hook: "Sunday reminder: You don't have to 'earn' your rest before Monday.",
+      caption: `Before the Monday notifications start pinging, take 10 minutes for your Sunday Reset 🌿\n\nOur team non-negotiable for tonight:\n1. Phone charging in another room by 9:30 PM\n2. Fresh sheets on the bed\n3. One warm cup of chamomile tea with zero screens\n\nWhat is your #1 non-negotiable ritual before a new week starts?\n\nTell us below—we're sharing our favorite replies on Stories tomorrow morning!`,
+      cta: "Drop your #1 non-negotiable ritual before a new week starts 👇",
+      audience: "Lifestyle community members looking for mindfulness and peer connection.",
+      whyItWorks: "Removes judgment and validates rest, making followers feel safe and eager to share personal routines.",
+      visualType: "community",
+      badge: "Community Ritual"
+    },
+    {
+      id: "cp-10",
+      code: "J",
+      title: "Trend-Based Reel: The Silent Product Review",
+      platform: "Reels",
+      category: "Reels",
+      format: "Reel (15 Seconds)",
+      objective: "Awareness",
+      shortDesc: "Adapting the viral ASMR sensory trend into an aesthetic demonstration of product ritual.",
+      hook: "Silent Review: What 7 days of morning calm actually feels like.",
+      storyboard: [
+        { scene: "Scene 01 (0-4s)", visual: "Natural daylight hitting a wooden kitchen counter. Gentle sound of opening ceramic container.", onScreenText: "7:00 AM • No alarms, no notifications." },
+        { scene: "Scene 02 (5-10s)", visual: "Whisking ceremonial matcha with bamboo whisk. Close-up on emerald green froth.", onScreenText: "Just 3 minutes of tactile ritual." },
+        { scene: "Scene 03 (11-15s)", visual: "First sip by a sunny window with open journal. Gentle smile.", onScreenText: "Calm focus for the rest of the day." }
+      ],
+      audio: "Ambient Natural Kitchen Sounds • ASMR",
+      caption: `No loud music. No fast cuts. Just morning calm in 15 seconds 🍵\n\nTrends should support the brand message rather than replace it. Here's how we adapt the 'silent review' format to spotlight product craftsmanship.\n\nSave this audio for your next morning reset!\n\n#SilentReview #ASMR #MorningRitual #VelaWellness`,
+      cta: "Save this audio for your next morning reset.",
+      audience: "Consumers seeking quiet aesthetics in a feed full of chaotic trending sounds.",
+      whyItWorks: "Deliberate sensory quiet stands out in high-tempo feeds, creating prolonged watch time.",
+      visualType: "reel",
+      badge: "Trend Adaptation"
+    },
+    {
+      id: "cp-11",
+      code: "K",
+      title: "Educational Post: How to Build 5 Content Pillars",
+      platform: "Instagram",
+      category: "Instagram",
+      format: "Infographic Carousel",
+      objective: "Education",
+      shortDesc: "A foundational guide breaking down how to structure recurring editorial categories.",
+      hook: "Stop guessing what to post. Here is how to structure 5 recurring content pillars.",
+      slides: [
+        { slideNum: 1, text: "How to Build 5 Content Pillars for Any Brand", note: "Cover Slide • Clean Framework" },
+        { slideNum: 2, text: "Pillar 1: Education (Saves)\nTutorials, teardowns, and actionable checklists.", note: "Generates Bookmarks" },
+        { slideNum: 3, text: "Pillar 2: Lifestyle & POV (Relatability)\nSituational humor and shared daily friction.", note: "Drives Shares" },
+        { slideNum: 4, text: "Pillar 3: Community (Comments)\nSunday resets, polls, and open AMA questions.", note: "Nurtures Dialogue" },
+        { slideNum: 5, text: "Pillars 4 & 5: Product & BTS (Conversion & Trust)\nIngredient stories and studio formulation tests.", note: "Builds Integrity" }
+      ],
+      caption: `If you feel like you're constantly reinventing the wheel every Monday, you don't have a content shortage—you need pillars 🏛️\n\nWhen your content follows 5 clear pillars, brainstorming becomes plug-and-play:\n• Monday: Education\n• Wednesday: Lifestyle / POV\n• Friday: Product Story\n• Sunday: Community Reset\n\nSave this post to reference during your next strategy session!\n\n#ContentPillars #SocialMediaPlanning #BrandStrategy #EditorialCalendar`,
+      cta: "Save this framework for your team's next planning session.",
+      audience: "Social media executives, marketing interns, and brand coordinators.",
+      whyItWorks: "Transforms an abstract marketing concept into an actionable Monday-to-Sunday operational system.",
+      visualType: "carousel",
+      badge: "Educational Pillars"
+    },
+    {
+      id: "cp-12",
+      code: "L",
+      title: "Campaign Creative: 30 Days of Better Mornings",
       platform: "Campaigns",
       category: "Campaigns",
       format: "Campaign Hero Post",
       objective: "Awareness",
-      shortDesc: "Launch announcement for fictional brand Vela's signature 30-day wellness challenge.",
+      shortDesc: "The hero announcement post for Vela's 30-day community activation challenge.",
       hook: "What if your mornings didn't feel like a race against the clock?",
-      caption: `Introducing: 30 Days of Better Mornings with Vela ☀️\n\nStarting October 1st, we're swapping chaotic alarm snoozes for 30 days of micro-rituals that actually feel good.\n\nNo 5 AM military ice baths.\nNo 14-step supplement cocktails.\nJust simple, evidence-backed habits to ground your mind and start your day with intention.\n\nJoin our community challenge: Download the free morning ritual tracker from our link in bio and tag #BetterMorningsWithVela to be featured all month long.\n\nAre you in? Drop a ☀️ below!`,
+      caption: `Introducing: 30 Days of Better Mornings with Vela ☀️\n\nStarting October 1st, we're swapping frantic 7 AM alarm snoozes for 30 days of micro-rituals that actually feel good.\n\nNo 5 AM military ice baths.\nNo 14-step supplement cocktails.\nJust simple, evidence-backed habits to ground your mind and start your day with calm intention.\n\nJoin our community challenge: Download the free morning habit tracker from our link in bio and tag #BetterMorningsWithVela to be featured all month long.\n\nAre you in? Drop a ☀️ below!`,
       cta: "Drop a ☀️ in the comments to join the 30-day challenge squad.",
-      audience: "Busy young professionals looking for gentle, sustainable wellness routines.",
+      audience: "Busy young professionals looking for sustainable wellness habits.",
+      whyItWorks: "Low barrier to entry, highly relatable emotional pain point, and clear community hashtag participation loop.",
       visualType: "campaign",
-      badge: "Campaign Launch"
-    },
-    {
-      id: "cp-10",
-      title: "Product Storytelling: The Anatomy of Morning Focus",
-      platform: "Instagram",
-      category: "Instagram",
-      format: "Carousel (5 Slides)",
-      objective: "Conversion",
-      shortDesc: "Soft-selling through formulation transparency, sensory design, and customer ritual.",
-      hook: "Why did we spend 8 months testing 14 prototypes before launching our morning focus blend?",
-      caption: `Behind every scoop of Vela Focus Blend is an obsession with how clean energy feels.\n\nMost morning drinks give you a 20-minute spike followed by a 2:00 PM crash. We formulated with organic matcha, L-theanine, and lion's mane to create steady, jitter-free clarity.\n\nSlide through to see our ingredient journey from harvest to morning mug.\n\n#VelaWellness #MorningRitual #ProductStorytelling #CleanEnergy`,
-      cta: "Discover the morning ritual blend via the link in our bio.",
-      audience: "Discerning wellness consumers tired of coffee jitters and sugary energy drinks.",
-      visualType: "carousel",
-      badge: "Product Narrative"
-    },
-    {
-      id: "cp-11",
-      title: "Community Focus: The Sunday Reset Protocol",
-      platform: "Instagram",
-      category: "Instagram",
-      format: "Static Card + Thread",
-      objective: "Community",
-      shortDesc: "A weekly recurring community check-in inviting followers to share their non-negotiable calm ritual.",
-      hook: "Sunday reminder: You don't have to 'earn' your rest.",
-      caption: `Before the Monday notifications start pinging, take 10 minutes for your Sunday Reset 🌿\n\nOur team non-negotiable for tonight:\n1. Phone charging in another room by 9:30 PM\n2. Fresh sheets on the bed\n3. One cup of warm chamomile tea with zero screens\n\nWhat is your #1 non-negotiable ritual before a new week begins?\n\nTell us below—we're sharing our favorite replies on Stories tomorrow morning!`,
-      cta: "Share your Sunday non-negotiable in the comments.",
-      audience: "Lifestyle followers seeking balance, calm, and peer connection.",
-      visualType: "static",
-      badge: "Community Ritual"
-    },
-    {
-      id: "cp-12",
-      title: "Trend-Based Reel: Stop Chasing Viral Audio",
-      platform: "Reels",
-      category: "Reels",
-      format: "Reel (18 Seconds)",
-      objective: "Education",
-      shortDesc: "Visual commentary on why high-intent saves outperform transient viral audio views.",
-      hook: "Trending audio will get you 10,000 views from people who don't care. Useful content gets you 500 views from your ideal clients.",
-      caption: `Which metric would you rather have?\n\nOption A: 50,000 views, 12 saves, 0 inquiries.\nOption B: 1,200 views, 340 saves, 18 direct messages asking where to learn more.\n\nSocial media for business is about building affinity, trust, and memorability—not just vanity metrics.\n\nSend this to a brand owner who needs to stop stressing over trends!\n\n#SocialMediaStrategy #ContentMarketing #BrandGrowth #SocialMediaExecutive`,
-      cta: "Send this to someone who needs to see this today.",
-      audience: "Marketing professionals, business owners, and social media strategists.",
-      visualType: "reel",
-      badge: "Trend Commentary"
+      badge: "Campaign Creative"
     }
   ],
 
-  // 30-Day Content Calendar Data (All 30 entries)
+  // 30-Day Content Calendar Data (All 30 entries - Realistic SMM Working Calendar)
   contentCalendar: [
-    { day: 1, date: "Day 01 • Mon", platform: "Instagram", type: "Carousel", topic: "Brand Refresh Announcement", hook: "Meet the new Vela: Why we simplified everything.", objective: "Awareness", cta: "Swipe through our new design story." },
+    { day: 1, date: "Day 01 • Mon", platform: "Instagram", type: "Carousel", topic: "Brand Refresh Announcement", hook: "Meet the new Vela: Why we simplified our entire social identity.", objective: "Awareness", cta: "Swipe through our new design story." },
     { day: 2, date: "Day 02 • Tue", platform: "TikTok/Reels", type: "Reel", topic: "Morning Routine POV", hook: "POV: You traded your morning panic scroll for 10 minutes of sunlight.", objective: "Engagement", cta: "Double tap if your mornings need this." },
-    { day: 3, date: "Day 03 • Wed", platform: "LinkedIn", type: "Text Post", topic: "Product Formulation Philosophy", hook: "Why we killed our bestselling recipe to start over.", objective: "Education", cta: "Read the founder breakdown below." },
+    { day: 3, date: "Day 03 • Wed", platform: "LinkedIn", type: "Text Post", topic: "Product Formulation Philosophy", hook: "Why we killed our bestselling recipe to start over from scratch.", objective: "Education", cta: "Read the founder breakdown below." },
     { day: 4, date: "Day 04 • Thu", platform: "Instagram", type: "Story", topic: "Interactive Habit Check", hook: "Which morning habit gives you the most calm?", objective: "Engagement", cta: "Tap the poll sticker!" },
     { day: 5, date: "Day 05 • Fri", platform: "Instagram", type: "Static Post", topic: "Weekend Unplug Prompt", hook: "Reminder: An unread inbox will not collapse your weekend.", objective: "Community", cta: "Drop an offline emoji below." },
     { day: 6, date: "Day 06 • Sat", platform: "TikTok/Reels", type: "Reel", topic: "ASMR Coffee & Matcha Ritual", hook: "The most satisfying 15 seconds of your Saturday morning.", objective: "Awareness", cta: "Save this audio for your weekend reset." },
@@ -328,70 +561,28 @@ const PORTFOLIO_DATA = {
     { day: 9, date: "Day 09 • Tue", platform: "Instagram", type: "Story", topic: "Behind The Scenes", hook: "Packing batch #41 in our studio—spot the packaging update?", objective: "Community", cta: "Reply with what you noticed!" },
     { day: 10, date: "Day 10 • Wed", platform: "TikTok/Reels", type: "Reel", topic: "Common Morning Mistake", hook: "Drinking coffee before water? Here's why you feel tired at 11 AM.", objective: "Education", cta: "Tag a friend who lives on caffeine." },
     { day: 11, date: "Day 11 • Thu", platform: "Instagram", type: "Carousel", topic: "The Science of L-Theanine", hook: "How to get clean caffeine focus with zero heart palpitations.", objective: "Education", cta: "Swipe to see the clinical breakdown." },
-    { day: 12, date: "Day 12 • Fri", platform: "LinkedIn", type: "Poll", topic: "Workplace Wellness Poll", hook: "Does your company have a 'no meeting morning' policy?", objective: "Engagement", cta: "Cast your vote and see how 200+ leaders voted." },
-    { day: 13, date: "Day 13 • Sat", platform: "Instagram", type: "Static Post", topic: "Customer Review Spotlight", hook: "'I didn't expect this to replace my third cup of espresso, but here we are.'", objective: "Conversion", cta: "Link in bio to try the starter kit." },
+    { day: 12, date: "Day 12 • Fri", platform: "LinkedIn", type: "Poll", topic: "Workplace Wellness Poll", hook: "Does your company have a 'no meeting morning' policy?", objective: "Engagement", cta: "Cast your vote and see how leaders responded." },
+    { day: 13, date: "Day 13 • Sat", platform: "Instagram", type: "Static Post", topic: "Customer Review Spotlight", hook: "'I didn't expect this to replace my espresso, but here we are.'", objective: "Conversion", cta: "Link in bio to try the starter kit." },
     { day: 14, date: "Day 14 • Sun", platform: "Instagram", type: "Story", topic: "This or That Question", hook: "Sunday night prep: Plan tomorrow's outfit or wing it at 7 AM?", objective: "Engagement", cta: "Vote on the slider sticker." },
     { day: 15, date: "Day 15 • Mon", platform: "Instagram", type: "Carousel", topic: "30 Days of Better Mornings Launch", hook: "Day 1 of 30: Small changes, compounded daily.", objective: "Awareness", cta: "Tag your morning accountability buddy." },
     { day: 16, date: "Day 16 • Tue", platform: "TikTok/Reels", type: "Reel", topic: "Challenge Day 2: 5-Min Journal", hook: "The 3 prompts I write before checking Slack.", objective: "Education", cta: "Screenshot these 3 prompts." },
-    { day: 17, date: "Day 17 • Wed", platform: "LinkedIn", type: "Text Post", topic: "Audience Attention Economics", hook: "Stop treating attention as a transaction. Treat it like a trust account.", objective: "Awareness", cta: "Share your thoughts on brand trust below." },
+    { day: 17, date: "Day 17 • Wed", platform: "LinkedIn", type: "Text Post", topic: "Audience Attention Economics", hook: "Stop treating attention as a transaction. Treat it like trust.", objective: "Awareness", cta: "Share your thoughts on brand trust below." },
     { day: 18, date: "Day 18 • Thu", platform: "Instagram", type: "Story", topic: "Community Spotlight", hook: "Sharing our favorite #BetterMorningsWithVela tags from yesterday!", objective: "Community", cta: "Tag us in your morning cup to be featured." },
     { day: 19, date: "Day 19 • Fri", platform: "TikTok/Reels", type: "Reel", topic: "Challenge Day 5: Screen-Free Breakfast", hook: "What happens when you eat breakfast without looking at notifications?", objective: "Engagement", cta: "Would you try this tomorrow morning?" },
     { day: 20, date: "Day 20 • Sat", platform: "Instagram", type: "Carousel", topic: "The Anatomy of a Morning Walk", hook: "Why 10 minutes of outdoor light sets your circadian clock.", objective: "Education", cta: "Save this for tomorrow's stroll." },
     { day: 21, date: "Day 21 • Sun", platform: "Instagram", type: "Static Post", topic: "Weekly Habit Check-in", hook: "Week 1 of 30 is complete. What habit felt easiest to maintain?", objective: "Community", cta: "Comment your answer below." },
-    { day: 22, date: "Day 22 • Mon", platform: "LinkedIn", type: "Text Post", topic: "Measuring Social ROI", hook: "Why 'Saves' are the most undervalued organic metric on Instagram.", objective: "Education", cta: "Read the analytical rationale in comments." },
+    { day: 22, date: "Day 22 • Mon", platform: "LinkedIn", type: "Text Post", topic: "Measuring Social Value", hook: "Why 'Saves' are the most valuable organic metric on Instagram.", objective: "Education", cta: "Read the analytical rationale in comments." },
     { day: 23, date: "Day 23 • Tue", platform: "TikTok/Reels", type: "Reel", topic: "Silent Review Format", hook: "Silent review of our morning hydration pack.", objective: "Awareness", cta: "Tap sound to listen to the ASMR textures." },
     { day: 24, date: "Day 24 • Wed", platform: "Instagram", type: "Story", topic: "Ask Me Anything", hook: "Q&A: What is tripping up your morning routine this week?", objective: "Community", cta: "Type in the question sticker box." },
-    { day: 25, date: "Day 25 • Thu", platform: "Instagram", type: "Carousel", topic: "Ingredient Deep Dive", hook: "Meet Lion's Mane: The super-mushroom your brain didn't know it needed.", objective: "Education", cta: "Swipe to see the clinical backing." },
+    { day: 25, date: "Day 25 • Thu", platform: "Instagram", type: "Carousel", topic: "Ingredient Deep Dive", hook: "Meet Lion's Mane: The mushroom your brain didn't know it needed.", objective: "Education", cta: "Swipe to see the research backing." },
     { day: 26, date: "Day 26 • Fri", platform: "TikTok/Reels", type: "Reel", topic: "Desk Setup & Morning Flow", hook: "Setting up a distraction-free workspace in 60 seconds.", objective: "Engagement", cta: "Save this desk aesthetic for inspo." },
     { day: 27, date: "Day 27 • Sat", platform: "Instagram", type: "Community Post", topic: "UGC Showcase", hook: "'How our community starts their Saturday' — a photo dump.", objective: "Community", cta: "Swipe through and leave some love." },
     { day: 28, date: "Day 28 • Sun", platform: "Instagram", type: "Carousel", topic: "Final Week Challenge Prep", hook: "Entering Week 4 of Better Mornings: 3 habits to keep forever.", objective: "Awareness", cta: "Bookmark this wrap-up guide." },
-    { day: 29, date: "Day 29 • Mon", platform: "LinkedIn", type: "Carousel", topic: "From Community to Retention", hook: "How challenge-based campaigns reduce customer churn by 32%.", objective: "Education", cta: "Swipe for the retention breakdown." },
-    { day: 30, date: "Day 30 • Tue", platform: "Instagram", type: "Static Post", topic: "Challenge Graduation & VIP Offer", hook: "You made it through 30 days. Here is our secret gift to our community.", objective: "Conversion", cta: "Check your DMs or click link in bio for the subscriber exclusive." }
+    { day: 29, date: "Day 29 • Mon", platform: "LinkedIn", type: "Carousel", topic: "From Community to Retention", hook: "How challenge-based campaigns foster long-term customer loyalty.", objective: "Education", cta: "Swipe for the retention breakdown." },
+    { day: 30, date: "Day 30 • Tue", platform: "Instagram", type: "Static Post", topic: "Challenge Graduation & VIP Offer", hook: "You made it through 30 days. Here is our secret gift to our community.", objective: "Conversion", cta: "Check link in bio for the subscriber exclusive." }
   ],
 
-  // Demo Analytics Dashboard Data
-  demoAnalytics: {
-    disclaimer: "DEMO DATA — FOR PORTFOLIO PURPOSES ONLY",
-    summaryMetrics: [
-      { label: "Total Reach", value: "142,500", change: "+34.2%", trend: "up", note: "Driven by educational carousels" },
-      { label: "Total Impressions", value: "318,200", change: "+28.7%", trend: "up", note: "High repeat views on reels" },
-      { label: "Engagement Rate", value: "4.82%", change: "+1.15%", trend: "up", note: "Industry benchmark is ~1.9%" },
-      { label: "Total Saves", value: "6,420", change: "+62.4%", trend: "up", note: "Key utility & bookmark metric" },
-      { label: "Total Shares", value: "4,180", change: "+41.0%", trend: "up", note: "Peer-to-peer amplification" },
-      { label: "Profile Visits", value: "12,940", change: "+22.8%", trend: "up", note: "Intentional discovery traffic" },
-      { label: "Net Followers", value: "+1,850", change: "+14.6%", trend: "up", note: "High-intent organic growth" }
-    ],
-    formatPerformance: [
-      { format: "Carousels", reachPct: 38, engagementPct: 5.4, savesCount: 3840, description: "Highest save-to-reach ratio; powers authority & educational pillars" },
-      { format: "Short-form Reels", reachPct: 44, engagementPct: 4.1, savesCount: 1620, description: "Primary discovery engine; captures top-of-funnel non-followers" },
-      { format: "Stories", reachPct: 12, engagementPct: 6.8, savesCount: 210, description: "Deepest 1-on-1 direct message conversations and sticker replies" },
-      { format: "Static Posts", reachPct: 6, engagementPct: 2.9, savesCount: 750, description: "Clean brand aesthetics and quote storytelling cards" }
-    ],
-    strategicQuestions: [
-      {
-        question: "Which content earns saves?",
-        insight: "Step-by-step guides, resource checklists, and actionable frameworks earn 4.2x more saves than lifestyle imagery alone."
-      },
-      {
-        question: "Which formats generate shares?",
-        insight: "Relatable situational humor and 'send this to a friend' peer-validation graphics drive 78% of all outbound DM shares."
-      },
-      {
-        question: "Which hooks improve retention?",
-        insight: "Direct problem-first visual hooks ('Stop guessing what to post') maintain 68% audience retention past the 3-second mark."
-      },
-      {
-        question: "Which topics create conversations?",
-        insight: "Contrarian opinions on industry norms ('Why consistency does not mean daily posting') spark the highest depth comment threads."
-      },
-      {
-        question: "Which platform performs best for the objective?",
-        insight: "Instagram leads for lifestyle discovery & visual carousels, while LinkedIn yields higher long-form professional engagement and founder authority."
-      }
-    ]
-  },
-
-  // Audit Checklist Data
+  // Diagnostic Audit Checklist Framework
   auditChecklist: [
     {
       category: "PROFILE",
